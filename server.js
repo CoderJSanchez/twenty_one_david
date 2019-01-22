@@ -11,9 +11,12 @@ const db = require("./config/keys").mongoURI;
 
 //Connect to MongoDB thru Mongoose
 mongoose
-  .connect(db)
+  .connect(
+    db,
+    { useMongoClient: true }
+  )
   .then(() => console.log("mongoDB connected"))
-  .catch(error => console.log(error));
+  .catch(err => console.log(err));
 
 app.get("/", (req, res) => res.send("21 DAVID"));
 
