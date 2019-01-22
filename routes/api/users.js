@@ -4,6 +4,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
 const passport = require("passport");
+const Joi = require("joi");
 
 const User = require("../../models/UserSchema");
 
@@ -37,6 +38,22 @@ router.post("/register", (req, res) => {
 
 //User Login - Returning JWT Token
 router.post("/login", (req, res) => {
+  //Joi Validation
+  const schema = {
+    password: Joi.string()
+      .min(6)
+      .regex(/^[a-zA-Z0-9]{3,30}$/),
+    email: Joi.string().email({ minDomainAtoms: 2 })
+  };
+
+  const result = Joi.validate(req.body, schema);
+  console.log(result);
+
+  if (result.error) {
+    res.status(400).send(result.error.details[0].message);
+    return;
+  }
+
   const email = req.body.email;
   const password = req.body.password;
 
