@@ -12,6 +12,17 @@ class Register extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  handleOnSubmit = e => {
+    e.preventDefault();
+    const newOfficer = {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2
+    };
+    console.log(newOfficer);
+  };
+
   render() {
     return (
       <div className="container">
@@ -19,7 +30,7 @@ class Register extends Component {
           <div className="row">
             <div className="col-md-6 m-auto text-center">
               <h2 className="text-white display-4">Sign Up</h2>
-              <form>
+              <form onSubmit={this.handleOnSubmit}>
                 <div className="form-group">
                   <input
                     type="text"

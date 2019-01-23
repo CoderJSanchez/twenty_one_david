@@ -12,6 +12,21 @@ router.get("/test", (req, res) => res.json({ msg: "Users Works" }));
 
 //Post request that allows users to register
 router.post("/register", (req, res) => {
+  const regSchema = {
+    name: Joi.string().min(2),
+    email: Joi.string().email({ minDomainAtoms: 2 }),
+    password: Joi.string()
+      .min(6)
+      .regex(/^[a-zA-Z0-9]{3,30}$/),
+    password2: Joi.string()
+      .min(6)
+      .regex(/^[a-zA-Z0-9]{3,30}$/)
+  };
+  const regResult = Joi.validate(req.body, regSchema);
+  if (regResult.error) {
+    res.status(400).send(regResult.error.details[0].message);
+  }
+
   //check to see if the user exits by checking if User == true
   User.findOne({ email: req.body.email }).then(user => {
     if (user) {

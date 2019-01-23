@@ -1,5 +1,24 @@
 import React, { Component } from "react";
 class Login extends Component {
+  state = {
+    email: "",
+    password: ""
+  };
+
+  handleOnChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleOnSubmit = e => {
+    e.preventDefault();
+
+    const officer = {
+      email: this.state.email,
+      password: this.state.password
+    };
+    console.log(officer);
+  };
+
   render() {
     return (
       <div className="container">
@@ -7,7 +26,7 @@ class Login extends Component {
           <div className="row">
             <div className="col-md-6 m-auto text-center">
               <h2 className="text-white display-4">Log In</h2>
-              <form>
+              <form onSubmit={this.handleOnSubmit}>
                 <div className="form-group">
                   <input
                     type="email"
@@ -15,6 +34,9 @@ class Login extends Component {
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     placeholder="Enter email"
+                    name="email"
+                    value={this.state.name}
+                    onChange={this.handleOnChange}
                   />
                 </div>
                 <div className="form-group">
@@ -23,6 +45,9 @@ class Login extends Component {
                     className="form-control"
                     id="exampleInputPassword1"
                     placeholder="Password"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleOnChange}
                   />
                 </div>
                 <button
