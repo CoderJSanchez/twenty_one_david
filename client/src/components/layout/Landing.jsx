@@ -5,7 +5,7 @@ class Landing extends Component {
   render() {
     return (
       <div className="heroImage">
-        <h1 className="landingHeader">Cryastal</h1>
+        <h1 className="landingHeader">Crystal</h1>
         <p className="lead">Simplifying DWI Paperwork</p>
         <div className="container">
           <div className="row">

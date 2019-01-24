@@ -7,7 +7,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            21D
+            C
           </Link>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
