@@ -26,7 +26,6 @@ class Login extends Component {
     };
 
     const errors = this.validate();
-    console.log(errors);
     //this line makes sure that the errors property is always set to an object, otherwise app crashes
     this.setState({ errors: errors || {} });
     if (errors) return;
@@ -41,8 +40,24 @@ class Login extends Component {
       .catch(err => console.log(err));
   };
 
+  validateProperty = input => {
+    if (input.email === "email") {
+      if (input.value.trim() === "") return "Username is required";
+    }
+    if (input.password === "password") {
+      if (input.value.trim() === "") return "Password is required";
+    }
+  };
+
   handleOnChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    const errors = { ...this.state.errors };
+    const errorMessage = this.validateProperty(errors);
+    this.setState({
+      [e.target.name]: e.target.value,
+      [e.target.errors]: e.target.value
+    });
+    if (errorMessage) errors[errors.name] = errorMessage;
+    else delete errors[errors.name];
   };
 
   render() {
