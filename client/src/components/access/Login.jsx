@@ -27,7 +27,8 @@ class Login extends Component {
 
     const errors = this.validate();
     console.log(errors);
-    this.setState({ errors });
+    //this line makes sure that the errors property is always set to an object, otherwise app crashes
+    this.setState({ errors: errors || {} });
     if (errors) return;
 
     //call the server
