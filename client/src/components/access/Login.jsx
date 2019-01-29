@@ -8,8 +8,13 @@ class Login extends Component {
     errors: {}
   };
 
-  handleOnChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+  validate = () => {
+    const errors = {};
+    if (this.state.email.trim() === "") errors.email = "email is required";
+    if (this.state.password.trim() === "")
+      errors.password = "password is required";
+
+    return Object.keys(errors).length === 0 ? null : errors;
   };
 
   handleOnSubmit = e => {
@@ -19,6 +24,13 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     };
+
+    const errors = this.validate();
+    console.log(errors);
+    this.setState({ errors });
+    if (errors) return;
+
+    //call the server
     axios
       .post("/api/users/login", officer)
       .then(res => {
@@ -28,8 +40,12 @@ class Login extends Component {
       .catch(err => console.log(err));
   };
 
+  handleOnChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   render() {
-    const { name, password } = this.state;
+    const { name, password, errors } = this.state;
     return (
       <div className="container">
         <div className="logInJumbo jumbotron">
@@ -47,6 +63,9 @@ class Login extends Component {
                     value={name}
                     onChange={this.handleOnChange}
                   />
+                  {errors.email && (
+                    <div className="alert alert-danger">{errors.email}</div>
+                  )}
                 </div>
                 <div className="form-group">
                   <input
@@ -57,6 +76,9 @@ class Login extends Component {
                     value={password}
                     onChange={this.handleOnChange}
                   />
+                  {errors.password && (
+                    <div className="alert alert-danger">{errors.password}</div>
+                  )}
                 </div>
                 <button
                   type="submit"
