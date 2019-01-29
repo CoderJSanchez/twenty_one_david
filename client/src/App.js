@@ -7,6 +7,8 @@ import Register from "./components/access/Register";
 import Login from "./components/access/Login";
 import Logout from "./components/access/Logout";
 import WarrantPage from "./components/Warrant/WarrantPage";
+import NarrativePage from "./components/Narrative/NarrativePage";
+
 import "./App.css";
 
 class App extends Component {
@@ -31,6 +33,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/logout" component={Logout} />
             <Route exact path="/warrant" component={WarrantPage} />
+            <Route exact path="/narrative" component={NarrativePage} />
           </div>
         </div>
       </Router>

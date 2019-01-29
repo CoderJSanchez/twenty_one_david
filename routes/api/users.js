@@ -4,6 +4,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
 const Joi = require("joi");
+const passport = require("passport");
 
 const User = require("../../models/UserSchema");
 

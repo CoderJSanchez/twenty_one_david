@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   render() {
-    console.log(this.props.user);
     let user = this.props.user;
 
     let label = user ? (
@@ -56,11 +55,23 @@ class Navbar extends Component {
                 </React.Fragment>
               )}
               {user && (
-                <li className="nav-item">
-                  <Link className="nav-link" to="/logout">
-                    Logout
-                  </Link>
-                </li>
+                <React.Fragment>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/warrant">
+                      Warrant Page
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/narrative">
+                      Narrative Page
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/logout">
+                      Logout
+                    </Link>
+                  </li>
+                </React.Fragment>
               )}
             </ul>
           </div>

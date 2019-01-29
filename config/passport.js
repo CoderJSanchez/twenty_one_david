@@ -4,6 +4,9 @@ const mongoose = require("mongoose");
 const User = mongoose.model("users");
 const keys = require("../config/keys");
 
+//docs on passport-jwt
+//https://www.npmjs.com/package/passport-jwt
+
 const opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = keys.secretOrKey;

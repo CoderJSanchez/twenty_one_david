@@ -4,7 +4,8 @@ import axios from "axios";
 class Login extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    errors: {}
   };
 
   handleOnChange = e => {
@@ -28,6 +29,7 @@ class Login extends Component {
   };
 
   render() {
+    const { name, password } = this.state;
     return (
       <div className="container">
         <div className="logInJumbo jumbotron">
@@ -39,11 +41,10 @@ class Login extends Component {
                   <input
                     type="email"
                     className="form-control"
-                    id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     placeholder="Enter email"
                     name="email"
-                    value={this.state.name}
+                    value={name}
                     onChange={this.handleOnChange}
                   />
                 </div>
@@ -51,10 +52,9 @@ class Login extends Component {
                   <input
                     type="password"
                     className="form-control"
-                    id="exampleInputPassword1"
                     placeholder="Password"
                     name="password"
-                    value={this.state.password}
+                    value={password}
                     onChange={this.handleOnChange}
                   />
                 </div>
