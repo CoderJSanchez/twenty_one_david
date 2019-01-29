@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import axios from "axios";
+
 class Login extends Component {
   state = {
     email: "",
@@ -16,7 +18,13 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     };
-    console.log(officer);
+    axios
+      .post("/api/users/login", officer)
+      .then(res => {
+        localStorage.setItem("token", JSON.stringify(res.data));
+        window.location = "/warrant";
+      })
+      .catch(err => console.log(err));
   };
 
   render() {

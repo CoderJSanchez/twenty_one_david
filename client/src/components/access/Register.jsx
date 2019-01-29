@@ -24,7 +24,7 @@ class Register extends Component {
     };
     axios
       .post("/api/users/register", newOfficer)
-      .then(res => console.log(res.data))
+      .then(res => (window.location = "/login"))
       .catch(err => console.log(err.response.data));
   };
 
@@ -42,7 +42,7 @@ class Register extends Component {
                     className="form-control"
                     id="userName"
                     aria-describedby="userName"
-                    placeholder="Name"
+                    placeholder="First & Last Name"
                     name="name"
                     value={this.state.name}
                     onChange={this.handleOnChange}
