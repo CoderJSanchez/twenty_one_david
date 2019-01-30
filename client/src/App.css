@@ -28,3 +28,21 @@
   background-color: #234567;
   margin-top: 10%;
 }
+
+.page {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+@media all {
+  .page-break {
+    display: none;
+  }
+}
+
+@media print {
+  .page-break {
+    display: block;
+    page-break-before: always;
+  }
+}
