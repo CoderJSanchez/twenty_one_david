@@ -34,6 +34,10 @@
   height: 29.7cm;
 }
 
+.indent {
+  text-indent: 50px;
+}
+
 @media all {
   .page-break {
     display: none;

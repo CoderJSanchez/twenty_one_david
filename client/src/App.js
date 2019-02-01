@@ -8,7 +8,6 @@ import Login from "./components/access/Login";
 import Logout from "./components/access/Logout";
 import WarrantPage from "./components/Warrant/WarrantPage";
 import NarrativePage from "./components/Narrative/NarrativePage";
-import WarrantFinal from "./components/Warrant/WarrantFinal";
 import SelectStep from "./components/layout/SelectStep";
 import PdfText from "./components/pdf/PdfTest";
 
@@ -37,7 +36,6 @@ class App extends Component {
             <Route exact path="/logout" component={Logout} />
             <Route exact path="/warrant" component={WarrantPage} />
             <Route exact path="/narrative" component={NarrativePage} />
-            <Route exact path="/warrantfinal" component={WarrantFinal} />
             <Route exact path="/selectstep" component={SelectStep} />
             <Route exact path="/pdf" component={PdfText} />
           </div>

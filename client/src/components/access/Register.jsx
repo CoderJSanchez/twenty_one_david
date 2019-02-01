@@ -70,7 +70,7 @@ class Register extends Component {
                     value={this.state.password}
                     onChange={this.handleOnChange}
                   />
-                  <small class="form-text text-muted text-left">
+                  <small className="form-text text-muted text-left">
                     minimum of 6 charcters.
                   </small>
                 </div>

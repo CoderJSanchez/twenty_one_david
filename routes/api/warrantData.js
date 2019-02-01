@@ -33,4 +33,16 @@ router.post("/warrant", (req, res) => {
     .catch(err => console.log(err));
 });
 
+router.get("/warrant", (req, res) => {
+  const errors = {};
+  Warrant.findOne({})
+    .then(data => {
+      if (!data) {
+        errors.noprofile = "no profile";
+        return res.status(404).json(errors);
+      }
+      res.json(data);
+    })
+    .catch(err => res.statas(404).json(err));
+});
 module.exports = router;
