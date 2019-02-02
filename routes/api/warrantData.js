@@ -19,13 +19,18 @@ router.post("/warrant", (req, res) => {
     officerID: req.body.officerID,
     offenderFirst: req.body.offenderFirst,
     offenderLast: req.body.offenderLast,
+    officerWitnessLast: req.body.officerWitnessLast,
+    officerWitnessID: req.body.officerWitnessID,
+    civilianWitnessDOB: req.body.civilianWitnessDOB,
+    civilianWitnessFull: req.body.civilianWitnessFull,
     race: req.body.race,
     sex: req.body.sex,
     dob: req.body.dob,
     dl: req.body.dl,
     height: req.body.height,
     weight: req.body.weight,
-    hairColor: req.body.haircolor
+    hair: req.body.hair,
+    address: req.body.address
   });
   newWarrant
     .save()

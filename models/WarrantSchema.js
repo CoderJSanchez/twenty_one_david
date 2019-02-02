@@ -19,6 +19,10 @@ const WarrantSchema = new Schema({
     type: Number,
     required: true
   },
+  address: {
+    type: String,
+    required: true
+  },
   officerLast: {
     type: String,
     required: true
@@ -59,9 +63,25 @@ const WarrantSchema = new Schema({
     type: Number,
     required: true
   },
-  hairColor: {
+  hair: {
     type: String,
-    required: false
+    required: true
+  },
+  officerWitnessLast: {
+    type: String,
+    required: true
+  },
+  officerWitnessID: {
+    type: Number,
+    required: true
+  },
+  civilianWitnessFull: {
+    type: String,
+    required: true
+  },
+  civilianWitnessDOB: {
+    type: String,
+    required: true
   }
 });
 

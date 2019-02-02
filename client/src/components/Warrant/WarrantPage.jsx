@@ -24,7 +24,7 @@ class WarrantPage extends Component {
     dl: "",
     height: "",
     weight: "",
-    hairColor: ""
+    hair: ""
   };
   handleInputs = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -37,8 +37,13 @@ class WarrantPage extends Component {
       day: this.state.day,
       year: this.state.year,
       time: this.state.time,
+      address: this.state.address,
       officerLast: this.state.officerLast,
       officerID: this.state.officerID,
+      officerWitnessLast: this.state.officerWitnessLast,
+      officerWitnessID: this.state.officerWitnessID,
+      civilianWitnessFull: this.state.civilianWitnessFull,
+      civilianWitnessDOB: this.state.civilianWitnessDOB,
       offenderFirst: this.state.offenderFirst,
       offenderLast: this.state.offenderLast,
       race: this.state.race,
@@ -47,7 +52,7 @@ class WarrantPage extends Component {
       dl: this.state.dl,
       height: this.state.height,
       weight: this.state.weight,
-      hairColor: this.state.hairColor
+      hair: this.state.hair
     };
     axios
       .post("/api/warrantData/warrant", newWarrantForm)
@@ -162,7 +167,7 @@ class WarrantPage extends Component {
               </Col>
             </Row>
             <Row className="mt-2">
-              <h4>Civilian Witness</h4>
+              <h4>Civilian Witness (full name)</h4>
             </Row>
             <Row className="mt-3">
               <Col xs="6">
@@ -265,10 +270,10 @@ class WarrantPage extends Component {
               <Col>
                 <Input
                   type="text"
-                  name="hairColor"
+                  name="hair"
                   placeholder="Hair Color"
                   onChange={this.handleInputs}
-                  value={this.state.hairColor}
+                  value={this.state.hair}
                 />
               </Col>
             </Row>
