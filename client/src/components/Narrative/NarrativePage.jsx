@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Form, FormGroup, Label, Input, Button, Collapse } from "reactstrap";
+
 class NarrativePage extends Component {
   state = {};
   render() {

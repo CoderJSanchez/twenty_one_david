@@ -5,83 +5,111 @@ const Schema = mongoose.Schema;
 const WarrantSchema = new Schema({
   month: {
     type: String,
-    required: true
+    required: false
   },
   day: {
     type: Number,
-    required: true
+    required: false
   },
   year: {
     type: Number,
-    required: true
+    required: false
   },
   time: {
     type: Number,
-    required: true
+    required: false
   },
   address: {
     type: String,
-    required: true
+    required: false
   },
   officerLast: {
     type: String,
-    required: true
+    required: false
   },
   officerID: {
     type: Number,
-    required: true
+    required: false
   },
   offenderFirst: {
     type: String,
-    required: true
+    required: false
   },
   offenderLast: {
     type: String,
-    required: true
+    required: false
   },
   race: {
     type: String,
-    required: true
+    required: false
   },
   sex: {
     type: String,
-    required: true
+    required: false
   },
   dob: {
     type: String,
-    required: true
+    required: false
   },
   dl: {
     type: Number,
-    required: true
+    required: false
   },
   height: {
     type: String,
-    required: true
+    required: false
   },
   weight: {
     type: Number,
-    required: true
+    required: false
   },
   hair: {
     type: String,
-    required: true
+    required: false
   },
   officerWitnessLast: {
     type: String,
-    required: true
+    required: false
   },
   officerWitnessID: {
     type: Number,
-    required: true
+    required: false
   },
   civilianWitnessFull: {
     type: String,
-    required: true
+    required: false
   },
   civilianWitnessDOB: {
     type: String,
-    required: true
+    required: false
+  },
+  civilianCheckBox: {
+    type: Boolean,
+    required: false
+  },
+  officerCheckBox: {
+    type: Boolean,
+    required: false
+  },
+  suspectAdmittedBox: {
+    type: Boolean,
+    required: false
+  },
+  alcoholStrong: {
+    type: Boolean,
+    required: false
+  },
+  alcoholModerate: {
+    type: Boolean,
+    required: false
+  },
+  alcoholFaint: {
+    type: Boolean,
+    required: false
+  },
+  alcoholNone: {
+    type: Boolean,
+    required: false
   }
 });
 

@@ -30,7 +30,10 @@ router.post("/warrant", (req, res) => {
     height: req.body.height,
     weight: req.body.weight,
     hair: req.body.hair,
-    address: req.body.address
+    address: req.body.address,
+    civilianCheckBox: req.body.civilianCheckBox,
+    officerCheckBox: req.body.officerCheckBox,
+    suspectAdmittedBox: req.body.suspectAdmittedBox
   });
   newWarrant
     .save()

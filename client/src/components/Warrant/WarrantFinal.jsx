@@ -22,7 +22,14 @@ class WarrantFinal extends Component {
     dl: "",
     height: "",
     weight: "",
-    hair: ""
+    hair: "",
+    civilianCheckBox: false,
+    officerCheckBox: false,
+    suspectAdmittedBox: false,
+    alcoholStrong: false,
+    alcoholModerate: false,
+    alcoholFaint: false,
+    alcoholNone: false
   };
 
   componentDidMount = () => {
@@ -48,7 +55,14 @@ class WarrantFinal extends Component {
         dl,
         height,
         weight,
-        hair
+        hair,
+        civilianCheckBox,
+        officerCheckBox,
+        suspectAdmittedBox,
+        alcoholStrong,
+        alcoholModerate,
+        alcoholFaint,
+        alcoholNone
       } = response.data;
       this.setState({
         month: month,
@@ -70,7 +84,14 @@ class WarrantFinal extends Component {
         dl: dl,
         height: height,
         weight: weight,
-        hair: hair
+        hair: hair,
+        civilianCheckBox: civilianCheckBox,
+        officerCheckBox: officerCheckBox,
+        suspectAdmittedBox: suspectAdmittedBox,
+        alcoholStrong: alcoholStrong,
+        alcoholModerate: alcoholModerate,
+        alcoholFaint: alcoholFaint,
+        alcoholNone: alcoholNone
       });
     });
   };
@@ -221,6 +242,7 @@ class WarrantFinal extends Component {
                     <input
                       className="form-check-input"
                       type="checkbox"
+                      checked={this.state.officerCheckBox}
                       value=""
                     />
                     <label className="form-check-label">
@@ -233,6 +255,7 @@ class WarrantFinal extends Component {
                     <input
                       className="form-check-input"
                       type="checkbox"
+                      checked={this.state.suspectAdmittedBox}
                       value=""
                     />
                     <label className="form-check-label">
@@ -247,16 +270,16 @@ class WarrantFinal extends Component {
                     <input
                       className="form-check-input"
                       type="checkbox"
+                      checked={this.state.civilianCheckBox}
                       value=""
                     />
                     <label className="form-check-label">
-                      A witness, <span className="witfirstName" />{" "}
-                      <span className="witLastName" />{" "}
-                      <span className="ofcrWitLast" />{" "}
-                      <span className="ofcrWitId" />, conveyed information to me
-                      that he/she witnessed the suspect operating a motor
-                      vehicle in a public place in County, Texas, prior to my
-                      arrival at the scene.
+                      A witness, {this.state.civilianWitnessFull},
+                      {this.state.civilianWitnessDOB}
+                      {this.state.officerLast}, {this.state.officerWitnessID},
+                      conveyed information to me that he/she witnessed the
+                      suspect operating a motor vehicle in a public place in
+                      County, Texas, prior to my arrival at the scene.
                     </label>
                   </div>
                 </div>
@@ -280,8 +303,8 @@ class WarrantFinal extends Component {
                   <input
                     className="form-check-input"
                     type="checkbox"
+                    checked={this.state.officerCheckBox}
                     value=""
-                    id=""
                   />
                   <label className="form-check-label">
                     I observed these observations.
@@ -291,15 +314,14 @@ class WarrantFinal extends Component {
                   <input
                     className="form-check-input"
                     type="checkbox"
+                    checked={this.state.civilianCheckBox}
                     value=""
-                    id=""
                   />
                   <label className="form-check-label">
-                    A witness, <span className="witfirstName" />{" "}
-                    <span className="witLastName" />{" "}
-                    <span className="ofcrWitLast" />{" "}
-                    <span className="ofcrWitId" />, conveyed information to me
-                    that he/she witnessed these observations.
+                    A witness, {this.state.civilianWitnessFull},
+                    {this.state.civilianWitnessDOB}
+                    {this.state.officerLast}, {this.state.officerID}, conveyed
+                    information to me that he/she witnessed these observations.
                   </label>
                 </div>
               </li>
@@ -308,7 +330,11 @@ class WarrantFinal extends Component {
               <br />
               <br />
               <h5 className="text-center">
-                DWI BLOOD SEARCH WARRANT, <u>Jason Borne, 07/12/1900</u>
+                DWI BLOOD SEARCH WARRANT,{" "}
+                <u>
+                  {this.state.offenderFirst} {this.state.offenderLast},{" "}
+                  {this.state.dob}
+                </u>
               </h5>
               <div className="page-break" />
               <div className="row">
@@ -321,6 +347,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      check={this.state.alcoholStrong}
                     />
                     <label className="form-check-label">Strong</label>
                   </div>
@@ -329,6 +356,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      check={this.state.alcoholModerate}
                     />
                     <label className="form-check-label">Moderate</label>
                   </div>
@@ -337,6 +365,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      check={this.state.alcoholFaint}
                     />
                     <label className="form-check-label">Faint</label>
                   </div>
@@ -345,6 +374,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      check={this.state.alcoholNone}
                     />
                     <label className="form-check-label">None</label>
                   </div>
@@ -1045,7 +1075,11 @@ class WarrantFinal extends Component {
               <br />
               <br />
               <h5 className="text-center">
-                DWI BLOOD SEARCH WARRANT, <u>Jason Borne, 07/12/1900</u>
+                DWI BLOOD SEARCH WARRANT,{" "}
+                <u>
+                  {this.state.offenderFirst} {this.state.offenderLast},{" "}
+                  {this.state.dob}
+                </u>
               </h5>
               <div className="page-break" />
               <div className="row">
