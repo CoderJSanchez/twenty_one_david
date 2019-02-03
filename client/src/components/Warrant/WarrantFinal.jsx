@@ -29,7 +29,67 @@ class WarrantFinal extends Component {
     alcoholStrong: false,
     alcoholModerate: false,
     alcoholFaint: false,
-    alcoholNone: false
+    alcoholNone: false,
+    eyesBloodshot: false,
+    eyesRedPink: false,
+    eyesGlassy: false,
+    eyesWatery: false,
+    eyesDilated: false,
+    eyesNormal: false,
+    speechThick: false,
+    speechIncoherent: false,
+    speechSlurred: false,
+    speechSlow: false,
+    speechMumbled: false,
+    speechStuttered: false,
+    speechTalkative: false,
+    speechRapid: false,
+    speechRepetitive: false,
+    speechFair: false,
+    speechGood: false,
+    attArgumentative: false,
+    attCombative: false,
+    attProfane: false,
+    attSarcastic: false,
+    attInsulting: false,
+    attCooperative: false,
+    attCocky: false,
+    attLaughing: false,
+    attCarefree: false,
+    attIndifferent: false,
+    attSleepy: false,
+    attPolite: false,
+    attSilent: false,
+    attReserved: false,
+    attCalm: false,
+    attTalkative: false,
+    attAnxious: false,
+    attExcited: false,
+    attConfused: false,
+    attUninhibited: false,
+    attMoodswing: false,
+    appDisorderly: false,
+    appOrderly: false,
+    appUrine: false,
+    appVomit: false,
+    balFalling: false,
+    balUnsteady: false,
+    balSwaying: false,
+    balSupport: false,
+    balFair: false,
+    balGood: false,
+    walkFalling: false,
+    walkSwaying: false,
+    walkHeavy: false,
+    walkFair: false,
+    walkGood: false,
+    walkSupport: false,
+    turnFalling: false,
+    turnStaggering: false,
+    turnSwaying: false,
+    turnHesitant: false,
+    turnFair: false,
+    turnGood: false
   };
 
   componentDidMount = () => {
@@ -62,8 +122,69 @@ class WarrantFinal extends Component {
         alcoholStrong,
         alcoholModerate,
         alcoholFaint,
-        alcoholNone
+        alcoholNone,
+        eyesBloodshot,
+        eyesRedPink,
+        eyesGlassy,
+        eyesWatery,
+        eyesDilated,
+        eyesNormal,
+        speechThick,
+        speechIncoherent,
+        speechSlurred,
+        speechSlow,
+        speechMumbled,
+        speechStuttered,
+        speechTalkative,
+        speechRapid,
+        speechRepetitive,
+        speechFair,
+        speechGood,
+        attArgumentative,
+        attCombative,
+        attProfane,
+        attSarcastic,
+        attInsulting,
+        attCooperative,
+        attCocky,
+        attLaughing,
+        attCarefree,
+        attIndifferent,
+        attSleepy,
+        attPolite,
+        attSilent,
+        attReserved,
+        attCalm,
+        attTalkative,
+        attAnxious,
+        attExcited,
+        attConfused,
+        attUninhibited,
+        attMoodswing,
+        appDisorderly,
+        appOrderly,
+        appUrine,
+        appVomit,
+        balFalling,
+        balUnsteady,
+        balSwaying,
+        balSupport,
+        balFair,
+        balGood,
+        walkFalling,
+        walkSwaying,
+        walkHeavy,
+        walkFair,
+        walkGood,
+        walkSupport,
+        turnFalling,
+        turnStaggering,
+        turnSwaying,
+        turnHesitant,
+        turnFair,
+        turnGood
       } = response.data;
+
       this.setState({
         month: month,
         day: day,
@@ -91,7 +212,67 @@ class WarrantFinal extends Component {
         alcoholStrong: alcoholStrong,
         alcoholModerate: alcoholModerate,
         alcoholFaint: alcoholFaint,
-        alcoholNone: alcoholNone
+        alcoholNone: alcoholNone,
+        eyesBloodshot,
+        eyesRedPink,
+        eyesGlassy,
+        eyesWatery,
+        eyesDilated,
+        eyesNormal,
+        speechThick,
+        speechIncoherent,
+        speechSlurred,
+        speechSlow,
+        speechMumbled,
+        speechStuttered,
+        speechTalkative,
+        speechRapid,
+        speechRepetitive,
+        speechFair,
+        speechGood,
+        attArgumentative,
+        attCombative,
+        attProfane,
+        attSarcastic,
+        attInsulting,
+        attCooperative,
+        attCocky,
+        attLaughing,
+        attCarefree,
+        attIndifferent,
+        attSleepy,
+        attPolite,
+        attSilent,
+        attReserved,
+        attCalm,
+        attTalkative,
+        attAnxious,
+        attExcited,
+        attConfused,
+        attUninhibited,
+        attMoodswing,
+        appDisorderly,
+        appOrderly,
+        appUrine,
+        appVomit,
+        balFalling,
+        balUnsteady,
+        balSwaying,
+        balSupport,
+        balFair,
+        balGood,
+        walkFalling,
+        walkSwaying,
+        walkHeavy,
+        walkFair,
+        walkGood,
+        walkSupport,
+        turnFalling,
+        turnStaggering,
+        turnSwaying,
+        turnHesitant,
+        turnFair,
+        turnGood
       });
     });
   };
@@ -330,7 +511,7 @@ class WarrantFinal extends Component {
               <br />
               <br />
               <h5 className="text-center">
-                DWI BLOOD SEARCH WARRANT,{" "}
+                DWI BLOOD SEARCH WARRANT,
                 <u>
                   {this.state.offenderFirst} {this.state.offenderLast},{" "}
                   {this.state.dob}
@@ -347,7 +528,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
-                      check={this.state.alcoholStrong}
+                      checked={this.state.alcoholStrong}
                     />
                     <label className="form-check-label">Strong</label>
                   </div>
@@ -356,7 +537,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
-                      check={this.state.alcoholModerate}
+                      checked={this.state.alcoholModerate}
                     />
                     <label className="form-check-label">Moderate</label>
                   </div>
@@ -365,7 +546,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
-                      check={this.state.alcoholFaint}
+                      checked={this.state.alcoholFaint}
                     />
                     <label className="form-check-label">Faint</label>
                   </div>
@@ -374,7 +555,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
-                      check={this.state.alcoholNone}
+                      checked={this.state.alcoholNone}
                     />
                     <label className="form-check-label">None</label>
                   </div>

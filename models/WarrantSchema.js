@@ -97,7 +97,7 @@ const WarrantSchema = new Schema({
   },
   alcoholStrong: {
     type: Boolean,
-    required: false
+    required: true
   },
   alcoholModerate: {
     type: Boolean,
@@ -110,6 +110,186 @@ const WarrantSchema = new Schema({
   alcoholNone: {
     type: Boolean,
     required: false
+  },
+  eyesBloodshot: {
+    type: String
+  },
+  eyesRedPink: {
+    type: String
+  },
+  eyesGlassy: {
+    type: String
+  },
+  eyesWatery: {
+    type: String
+  },
+  eyesDilated: {
+    type: String
+  },
+  eyesNormal: {
+    type: String
+  },
+  speechThick: {
+    type: String
+  },
+  speechIncoherent: {
+    type: String
+  },
+  speechSlurred: {
+    type: String
+  },
+  speechSlow: {
+    type: String
+  },
+  speechMumbled: {
+    type: String
+  },
+  speechStuttered: {
+    type: String
+  },
+  speechTalkative: {
+    type: String
+  },
+  speechRapid: {
+    type: String
+  },
+  speechRepetitive: {
+    type: String
+  },
+  speechFair: {
+    type: String
+  },
+  speechGood: {
+    type: String
+  },
+  attArgumentative: {
+    type: String
+  },
+  attCombative: {
+    type: String
+  },
+  attProfane: {
+    type: String
+  },
+  attSarcastic: {
+    type: String
+  },
+  attInsulting: {
+    type: String
+  },
+  attCooperative: {
+    type: String
+  },
+  attCocky: {
+    type: String
+  },
+  attLaughing: {
+    type: String
+  },
+  attCarefree: {
+    type: String
+  },
+  attIndifferent: {
+    type: String
+  },
+  attSleepy: {
+    type: String
+  },
+  attPolite: {
+    type: String
+  },
+  attSilent: {
+    type: String
+  },
+  attReserved: {
+    type: String
+  },
+  attCalm: {
+    type: String
+  },
+  attTalkative: {
+    type: String
+  },
+  attAnxious: {
+    type: String
+  },
+  attExcited: {
+    type: String
+  },
+  attConfused: {
+    type: String
+  },
+  attUninhibited: {
+    type: String
+  },
+  attMoodswing: {
+    type: String
+  },
+  appDisorderly: {
+    type: String
+  },
+  appOrderly: {
+    type: String
+  },
+  appUrine: {
+    type: String
+  },
+  appVomit: {
+    type: String
+  },
+  balFalling: {
+    type: String
+  },
+  balUnsteady: {
+    type: String
+  },
+  balSwaying: {
+    type: String
+  },
+  balSupport: {
+    type: String
+  },
+  balFair: {
+    type: String
+  },
+  balGood: {
+    type: String
+  },
+  walkFalling: {
+    type: String
+  },
+  walkSwaying: {
+    type: String
+  },
+  walkHeavy: {
+    type: String
+  },
+  walkFair: {
+    type: String
+  },
+  walkGood: {
+    type: String
+  },
+  walkSupport: {
+    type: String
+  },
+  turnFalling: {
+    type: String
+  },
+  turnStaggering: {
+    type: String
+  },
+  turnSwaying: {
+    type: String
+  },
+  turnHesitant: {
+    type: String
+  },
+  turnFair: {
+    type: String
+  },
+  turnGood: {
+    type: String
   }
 });
 
