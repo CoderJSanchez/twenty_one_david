@@ -112,184 +112,187 @@ const WarrantSchema = new Schema({
     required: false
   },
   eyesBloodshot: {
-    type: String
+    type: Boolean
   },
   eyesRedPink: {
-    type: String
+    type: Boolean
   },
   eyesGlassy: {
-    type: String
+    type: Boolean
   },
   eyesWatery: {
-    type: String
+    type: Boolean
   },
   eyesDilated: {
-    type: String
+    type: Boolean
   },
   eyesNormal: {
-    type: String
+    type: Boolean
   },
   speechThick: {
-    type: String
+    type: Boolean
   },
   speechIncoherent: {
-    type: String
+    type: Boolean
   },
   speechSlurred: {
-    type: String
+    type: Boolean
   },
   speechSlow: {
-    type: String
+    type: Boolean
   },
   speechMumbled: {
-    type: String
+    type: Boolean
   },
   speechStuttered: {
-    type: String
+    type: Boolean
   },
   speechTalkative: {
-    type: String
+    type: Boolean
   },
   speechRapid: {
-    type: String
+    type: Boolean
   },
   speechRepetitive: {
-    type: String
+    type: Boolean
   },
   speechFair: {
-    type: String
+    type: Boolean
   },
   speechGood: {
-    type: String
+    type: Boolean
   },
   attArgumentative: {
-    type: String
+    type: Boolean
   },
   attCombative: {
-    type: String
+    type: Boolean
   },
   attProfane: {
-    type: String
+    type: Boolean
   },
   attSarcastic: {
-    type: String
+    type: Boolean
   },
   attInsulting: {
-    type: String
+    type: Boolean
   },
   attCooperative: {
-    type: String
+    type: Boolean
   },
   attCocky: {
-    type: String
+    type: Boolean
   },
   attLaughing: {
-    type: String
+    type: Boolean
   },
   attCarefree: {
-    type: String
+    type: Boolean
   },
   attIndifferent: {
-    type: String
+    type: Boolean
   },
   attSleepy: {
-    type: String
+    type: Boolean
   },
   attPolite: {
-    type: String
+    type: Boolean
   },
   attSilent: {
-    type: String
+    type: Boolean
   },
   attReserved: {
-    type: String
+    type: Boolean
   },
   attCalm: {
-    type: String
+    type: Boolean
   },
   attTalkative: {
-    type: String
+    type: Boolean
   },
   attAnxious: {
-    type: String
+    type: Boolean
   },
   attExcited: {
-    type: String
+    type: Boolean
   },
   attConfused: {
-    type: String
+    type: Boolean
   },
   attUninhibited: {
-    type: String
+    type: Boolean
   },
   attMoodswing: {
-    type: String
+    type: Boolean
   },
   appDisorderly: {
-    type: String
+    type: Boolean
   },
   appOrderly: {
-    type: String
+    type: Boolean
   },
   appUrine: {
-    type: String
+    type: Boolean
   },
   appVomit: {
-    type: String
+    type: Boolean
   },
   balFalling: {
-    type: String
+    type: Boolean
   },
   balUnsteady: {
-    type: String
+    type: Boolean
   },
   balSwaying: {
-    type: String
+    type: Boolean
   },
   balSupport: {
-    type: String
+    type: Boolean
   },
   balFair: {
-    type: String
+    type: Boolean
   },
   balGood: {
-    type: String
+    type: Boolean
   },
   walkFalling: {
-    type: String
+    type: Boolean
   },
   walkSwaying: {
-    type: String
+    type: Boolean
   },
   walkHeavy: {
-    type: String
+    type: Boolean
   },
   walkFair: {
-    type: String
+    type: Boolean
   },
   walkGood: {
-    type: String
+    type: Boolean
   },
   walkSupport: {
-    type: String
+    type: Boolean
   },
   turnFalling: {
-    type: String
+    type: Boolean
   },
   turnStaggering: {
-    type: String
+    type: Boolean
   },
   turnSwaying: {
-    type: String
+    type: Boolean
   },
   turnHesitant: {
-    type: String
+    type: Boolean
   },
   turnFair: {
-    type: String
+    type: Boolean
   },
   turnGood: {
-    type: String
+    type: Boolean
+  },
+  walkStagg: {
+    type: Boolean
   }
 });
 

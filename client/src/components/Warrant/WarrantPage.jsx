@@ -81,6 +81,7 @@ class WarrantPage extends Component {
     balFair: false,
     balGood: false,
     walkFalling: false,
+    walkStagg: false,
     walkSwaying: false,
     walkHeavy: false,
     walkFair: false,

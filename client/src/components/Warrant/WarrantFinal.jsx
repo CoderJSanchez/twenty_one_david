@@ -89,7 +89,8 @@ class WarrantFinal extends Component {
     turnSwaying: false,
     turnHesitant: false,
     turnFair: false,
-    turnGood: false
+    turnGood: false,
+    walkStagg: false
   };
 
   componentDidMount = () => {
@@ -182,7 +183,8 @@ class WarrantFinal extends Component {
         turnSwaying,
         turnHesitant,
         turnFair,
-        turnGood
+        turnGood,
+        walkStagg
       } = response.data;
 
       this.setState({
@@ -272,7 +274,8 @@ class WarrantFinal extends Component {
         turnSwaying,
         turnHesitant,
         turnFair,
-        turnGood
+        turnGood,
+        walkStagg
       });
     });
   };
@@ -568,6 +571,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.eyesBloodshot}
                     />
                     <label className="form-check-label">Bloodshot</label>
                   </div>
@@ -576,6 +580,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.eyesRedPink}
                     />
                     <label className="form-check-label">Red/Pink</label>
                   </div>
@@ -584,6 +589,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.eyesGlassy}
                     />
                     <label className="form-check-label">Glassy</label>
                   </div>
@@ -592,6 +598,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.eyesWatery}
                     />
                     <label className="form-check-label">Watery</label>
                   </div>
@@ -600,6 +607,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.eyesDilated}
                     />
                     <label className="form-check-label">Dilated</label>
                   </div>
@@ -608,18 +616,20 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.eyesNormal}
                     />
                     <label className="form-check-label">Normal</label>
                   </div>
                   {/* speech */}
                   <p>
-                    <strong>Eyes</strong>
+                    <strong>Speech</strong>
                   </p>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechThick}
                     />
                     <label className="form-check-label">Thick-tongued</label>
                   </div>
@@ -628,6 +638,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechIncoherent}
                     />
                     <label className="form-check-label">Incoherent</label>
                   </div>
@@ -636,6 +647,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechSlurred}
                     />
                     <label className="form-check-label">Slurred</label>
                   </div>
@@ -644,6 +656,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechSlow}
                     />
                     <label className="form-check-label">Slow</label>
                   </div>
@@ -652,6 +665,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechMumbled}
                     />
                     <label className="form-check-label">Mumbled</label>
                   </div>
@@ -660,6 +674,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechStuttered}
                     />
                     <label className="form-check-label">Stuttered</label>
                   </div>
@@ -668,6 +683,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechTalkative}
                     />
                     <label className="form-check-label">Talkative</label>
                   </div>
@@ -676,6 +692,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechRapid}
                     />
                     <label className="form-check-label">Rapid</label>
                   </div>
@@ -684,6 +701,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechRepetitive}
                     />
                     <label className="form-check-label">Repetitive</label>
                   </div>
@@ -692,6 +710,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechFair}
                     />
                     <label className="form-check-label">Fair</label>
                   </div>
@@ -700,6 +719,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.speechGood}
                     />
                     <label className="form-check-label">Good</label>
                   </div>
@@ -713,6 +733,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attArgumentative}
                     />
                     <label className="form-check-label">Argumentative</label>
                   </div>
@@ -721,6 +742,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attCombative}
                     />
                     <label className="form-check-label">Combative</label>
                   </div>
@@ -729,6 +751,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attProfane}
                     />
                     <label className="form-check-label">Profane</label>
                   </div>
@@ -737,6 +760,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attSarcastic}
                     />
                     <label className="form-check-label">Sarcastic</label>
                   </div>
@@ -745,6 +769,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attInsulting}
                     />
                     <label className="form-check-label">Insulting</label>
                   </div>
@@ -753,6 +778,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attCooperative}
                     />
                     <label className="form-check-label">Cooperative</label>
                   </div>
@@ -761,6 +787,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attCocky}
                     />
                     <label className="form-check-label">Cocky</label>
                   </div>
@@ -769,6 +796,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attLaughing}
                     />
                     <label className="form-check-label">Laughing</label>
                   </div>
@@ -777,6 +805,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attCarefree}
                     />
                     <label className="form-check-label">Carefree</label>
                   </div>
@@ -785,6 +814,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attIndifferent}
                     />
                     <label className="form-check-label">Indifferent</label>
                   </div>
@@ -793,6 +823,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attSleepy}
                     />
                     <label className="form-check-label">Sleepy/Drowsy</label>
                   </div>
@@ -801,6 +832,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attPolite}
                     />
                     <label className="form-check-label">Polite</label>
                   </div>
@@ -809,6 +841,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attSilent}
                     />
                     <label className="form-check-label">Silent</label>
                   </div>
@@ -817,6 +850,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attReserved}
                     />
                     <label className="form-check-label">Reserved</label>
                   </div>
@@ -825,6 +859,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attCalm}
                     />
                     <label className="form-check-label">Calm</label>
                   </div>
@@ -833,6 +868,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attAnxious}
                     />
                     <label className="form-check-label">Anxious</label>
                   </div>
@@ -841,6 +877,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attExcited}
                     />
                     <label className="form-check-label">Excited</label>
                   </div>
@@ -849,6 +886,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attConfused}
                     />
                     <label className="form-check-label">Confused</label>
                   </div>
@@ -857,6 +895,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attUninhibited}
                     />
                     <label className="form-check-label">Uninhibited</label>
                   </div>
@@ -865,101 +904,50 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.attMoodswing}
                     />
-                    <label className="form-check-label">Mood Swings</label>
+                    a<label className="form-check-label">Mood Swings</label>
                   </div>
 
                   {/* speech */}
                   <p>
-                    <strong>Eyes</strong>
+                    <strong>Appearance</strong>
                   </p>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.appDisorderly}
                     />
-                    <label className="form-check-label">Thick-tongued</label>
+                    <label className="form-check-label">Disorderly</label>
                   </div>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.appOrderly}
                     />
-                    <label className="form-check-label">Incoherent</label>
+                    <label className="form-check-label">Orderly</label>
                   </div>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.appUrine}
                     />
-                    <label className="form-check-label">Slurred</label>
+                    <label className="form-check-label">Signs of urine</label>
                   </div>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.appVomit}
                     />
-                    <label className="form-check-label">Slow</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Mumbled</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Stuttered</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Talkative</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Rapid</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Repetitive</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Fair</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Good</label>
+                    <label className="form-check-label">Signs of vomit</label>
                   </div>
                 </div>
                 <div className="col-md-4">
@@ -971,6 +959,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.balFalling}
                     />
                     <label className="form-check-label">Falling</label>
                   </div>
@@ -979,6 +968,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.balUnsteady}
                     />
                     <label className="form-check-label">Unsteady</label>
                   </div>
@@ -987,6 +977,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.balSwaying}
                     />
                     <label className="form-check-label">Swaying</label>
                   </div>
@@ -995,6 +986,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.balSupport}
                     />
                     <label className="form-check-label">Needed Support</label>
                   </div>
@@ -1003,6 +995,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.balFair}
                     />
                     <label className="form-check-label">Fair</label>
                   </div>
@@ -1011,6 +1004,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.balGood}
                     />
                     <label className="form-check-label">Good</label>
                   </div>
@@ -1023,6 +1017,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.walkFalling}
                     />
                     <label className="form-check-label">Falling</label>
                   </div>
@@ -1031,6 +1026,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.walkStagg}
                     />
                     <label className="form-check-label">Staggering</label>
                   </div>
@@ -1039,6 +1035,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.walkSwaying}
                     />
                     <label className="form-check-label">Swaying</label>
                   </div>
@@ -1047,6 +1044,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.walkHeavy}
                     />
                     <label className="form-check-label">Heavy Footed</label>
                   </div>
@@ -1055,6 +1053,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.walkFair}
                     />
                     <label className="form-check-label">Fair</label>
                   </div>
@@ -1063,90 +1062,56 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.walkGood}
                     />
                     <label className="form-check-label">Good</label>
                   </div>
                   {/* speech */}
                   <p>
-                    <strong>Eyes</strong>
+                    <strong>Turning</strong>
                   </p>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.turnFalling}
                     />
-                    <label className="form-check-label">Thick-tongued</label>
+                    <label className="form-check-label">Falling</label>
                   </div>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.turnStaggering}
                     />
-                    <label className="form-check-label">Incoherent</label>
+                    <label className="form-check-label">Staggering</label>
                   </div>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.turnSwaying}
                     />
-                    <label className="form-check-label">Slurred</label>
+                    <label className="form-check-label">Swaying</label>
                   </div>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.turnHesitant}
                     />
-                    <label className="form-check-label">Slow</label>
+                    <label className="form-check-label">Hesitant</label>
                   </div>
                   <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
-                    />
-                    <label className="form-check-label">Mumbled</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Stuttered</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Talkative</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Rapid</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label className="form-check-label">Repetitive</label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
+                      checked={this.state.turnFair}
                     />
                     <label className="form-check-label">Fair</label>
                   </div>
@@ -1155,6 +1120,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.turnGood}
                     />
                     <label className="form-check-label">Good</label>
                   </div>
