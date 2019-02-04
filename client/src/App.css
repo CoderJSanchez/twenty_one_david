@@ -38,6 +38,11 @@
   text-indent: 50px;
 }
 
+.dic24pic {
+  width: 600px;
+  height: 800px;
+}
+
 @media all {
   .page-break {
     display: none;

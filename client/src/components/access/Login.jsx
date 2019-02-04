@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 class Login extends Component {
@@ -98,11 +99,18 @@ class Login extends Component {
                 </div>
                 <button
                   type="submit"
-                  className="btn btn-primary btn-lg btn-block"
+                  className="btn btn-primary btn-lg btn-block mb-3"
                 >
                   Submit
                 </button>
               </form>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6 m-auto text-center">
+              <small className="text-white">
+                <Link to="/register">Need to Sign Up?</Link>
+              </small>
             </div>
           </div>
         </div>

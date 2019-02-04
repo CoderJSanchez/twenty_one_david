@@ -102,4 +102,13 @@ router.post("/login", (req, res) => {
   });
 });
 
+//protected routes
+// router.get(
+//   "/selectstep",
+//   passport.authenticate("jwt", { session: false }),
+//   (req, res) => {
+//     res.json(req.user);
+//   }
+// );
+
 module.exports = router;

@@ -1633,7 +1633,11 @@ class WarrantFinal extends Component {
               <br />
               <br />
               <h5 className="text-center">
-                DWI BLOOD SEARCH WARRANT, <u>Jason Borne, 07/12/1900</u>
+                DWI BLOOD SEARCH WARRANT,{" "}
+                <u>
+                  {this.state.offenderFirst} {this.state.offenderLast},{" "}
+                  {this.state.dob}
+                </u>
               </h5>
               <div className="page-break" />
               <li>
@@ -1810,7 +1814,11 @@ class WarrantFinal extends Component {
             <br />
             <br />
             <h5 className="text-center">
-              DWI BLOOD SEARCH WARRANT, <u>Jason Borne, 07/12/1900</u>
+              DWI BLOOD SEARCH WARRANT,{" "}
+              <u>
+                {this.state.offenderFirst} {this.state.offenderLast},{" "}
+                {this.state.dob}
+              </u>
             </h5>
             <div className="page-break" />
           </div>
@@ -1855,10 +1863,358 @@ class WarrantFinal extends Component {
         <div className="form-check d-flex p-2 bd-highlight">
           <input className="form-check-input " type="checkbox" value="" />
           <label className="form-check-label ">
-            Municipal Judge, City of Garland, Magistrate in and for Dallas and
-            Collin Counties, Texas
+            Municipal Judge, City of Garland,
+            <p>Magistrate in and for Dallas and Collin Counties, Texas</p>
           </label>
         </div>
+        <div className="form-check d-flex p-2 bd-highlight">
+          <input className="form-check-input " type="checkbox" value="" />
+          <label className="form-check-label ">
+            Other Magistrate:
+            <p>Title and County __________________________________________</p>
+          </label>
+        </div>
+        <br />
+        <br />
+        <h5 className="text-center">
+          DWI BLOOD SEARCH WARRANT,{" "}
+          <u>
+            {this.state.offenderFirst} {this.state.offenderLast},{" "}
+            {this.state.dob}
+          </u>
+        </h5>
+        <div className="page-break" />
+        <div className="row">
+          <div className="col-md-12">
+            <h6 className="text-left">THE STATE OF TEXAS</h6>
+            <h6 className="text-right">Docket No ______________</h6>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <h6 className="text-left">COUNTY OF DALLAS</h6>
+            <h6 className="text-right">COURT: _____________</h6>
+            <br />
+            <h6 className="text-right">GPD CASE NO: _________________</h6>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <br /> <br />
+            <h6 className="text-center">
+              <strong>
+                <u>SEARCH WARRANT</u>
+              </strong>
+            </h6>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              The State Of Texas: To any Sheriff or any Peace Officer of County,
+              Texas, or any Peace Officer of the State of Texas:
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Whereas, the Affiant, whose name appears on the Affidavit attached
+              hereto is a peace officer under the laws of Texas and did
+              heretofore this day subscribed and swore to said affidavit before
+              me, (which said Affidavit is here now made a part hereof for all
+              purposes and incorporated herein as if written verbatim within the
+              confines of this warrant) and whereas I find that the verified
+              facts stated by Affiant in said Affidavit show that Affiant has
+              probable cause for the belief Affiant expresses herein and
+              establishes the existence of proper grounds for the issuance of
+              this Warrant:
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Now, therefore, you are commanded to take custody of the suspect.
+              You shall search for, seize and maintain as evidence the property
+              described in said Affidavit, to-wit: human blood from the body of
+              the following described individual:
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Name:{" "}
+              <u>
+                {this.state.offenderFirst} {this.state.offenderLast}
+              </u>
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-3">
+            <p>
+              Race: <u>{this.state.race}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              Sex: <u>{this.state.sex}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              DOB: <u>{this.state.dob}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              DL/ID: <u>{this.state.dl}</u>
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-3">
+            <p>
+              Height: <u>{this.state.height}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              Weight: <u>{this.state.weight}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              Hair Color: <u>{this.state.hair}</u>
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Further, authority is hereby granted to forensically analyze the
+              blood seized pursuant to this search warrant for the presence of
+              intoxicating substances.
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Herein fail not, but have you then and there this warrant within
+              three days, exclusive of the day of its issuance, with your return
+              thereon, showing how you have executed the same.
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Issued on this the {this.state.day} of {this.state.year}, at{" "}
+              {this.state.time} o'clock P.M / A.M. to certify which witness my
+              hand this day.
+            </p>
+          </div>
+        </div>
+        <div className="sigBox">
+          <p>__________________________________</p>
+          <div className="form-check d-flex p-2 bd-highlight">
+            <input className="form-check-input " type="checkbox" value="" />
+            <label className="form-check-label ">
+              Municipal Judge, City of Garland,
+              <p>Magistrate in and for Dallas and Collin Counties, Texas</p>
+            </label>
+          </div>
+          <div className="form-check d-flex p-2 bd-highlight">
+            <input className="form-check-input " type="checkbox" value="" />
+            <label className="form-check-label ">
+              Other Magistrate:
+              <p>Title and County __________________________________________</p>
+            </label>
+          </div>
+        </div>
+        <br />
+        <br />
+        <h5 className="text-center">
+          DWI BLOOD SEARCH WARRANT,{" "}
+          <u>
+            {this.state.offenderFirst} {this.state.offenderLast},{" "}
+            {this.state.dob}
+          </u>
+        </h5>
+        <div className="page-break" />
+        <div className="row">
+          <div className="col-md-12">
+            <h6 className="text-left">THE STATE OF TEXAS</h6>
+            <h6 className="text-right">Docket No ______________</h6>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <h6 className="text-left">COUNTY OF DALLAS</h6>
+            <h6 className="text-right">COURT: _____________</h6>
+            <br />
+            <h6 className="text-right">GPD CASE NO: _________________</h6>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <br /> <br />
+            <h6 className="text-center">
+              <strong>
+                <u>ORDER FOR ASSISTANCE IN EXECUTION OF SEARCH WARRANT</u>
+              </strong>
+            </h6>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              To any physician, nurse, medical technician, or phlebotomist,
+              licensed by the State of Texas, or other person qualified in the
+              intravenous removal of human blood:
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Whereas, the affiant whose name appears on the affidavit attached
+              hereto is a peace officer under the laws of Texas and did
+              heretofore this day subscribe and swear to said affidavit before
+              me (which said affidavit is here now made a part hereof for all
+              purposes and incorporated herein as if written verbatim within the
+              confines of this Order), and whereas I find that the verified
+              facts stated by affiant in said Affidavit show that affiant has
+              probable cause for the belief he/she expresses herein and
+              establishes existence of proper grounds for issuance of a search
+              warrant
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              And whereas, this court has issued a warrant to search for and
+              seize blood from the suspect named and described in the Affidavit,
+              to-wit:
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Name:{" "}
+              <u>
+                {this.state.offenderFirst} {this.state.offenderLast}
+              </u>
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-3">
+            <p>
+              Race: <u>{this.state.race}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              Sex: <u>{this.state.sex}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              DOB: <u>{this.state.dob}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              DL/ID: <u>{this.state.dl}</u>
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-3">
+            <p>
+              Height: <u>{this.state.height}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              Weight: <u>{this.state.weight}</u>
+            </p>
+          </div>
+          <div className="col-md-3">
+            <p>
+              Hair Color: <u>{this.state.hair}</u>
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              <strong>
+                Therefore you are hereby ordered and commanded to cooperate with
+                any peace officer requesting your professional assistance in the
+                execution of this warrant.
+              </strong>
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Herein fail not, as this order is directed to any individual whose
+              aid and assistance is requested by the officer bearing the
+              accompanying search warrant, is authorized by the full authority
+              of this Court to issue warrants and orders to enforce the laws of
+              the State of Texas, and Article 18.08 of the Texas Code of
+              Criminal Procedure.{" "}
+              <strong>
+                Any individual who fails to comply with this Order when
+                requested shall be liable for contempt of this Court and subject
+                to all penalties authorized by law.
+              </strong>
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>
+              Ordered on this the {this.state.day} of {this.state.year}, at{" "}
+              {this.state.time} o'clock P.M / A.M. to certify which witness my
+              hand this day.
+            </p>
+          </div>
+        </div>
+        <div className="sigBox">
+          <p>__________________________________</p>
+          <div className="form-check d-flex p-2 bd-highlight">
+            <input className="form-check-input " type="checkbox" value="" />
+            <label className="form-check-label ">
+              Municipal Judge, City of Garland,
+              <p>Magistrate in and for Dallas and Collin Counties, Texas</p>
+            </label>
+          </div>
+          <div className="form-check d-flex p-2 bd-highlight">
+            <input className="form-check-input " type="checkbox" value="" />
+            <label className="form-check-label ">
+              Other Magistrate:
+              <p>Title and County __________________________________________</p>
+            </label>
+          </div>
+        </div>
+        <br />
+        <br />
+        <h5 className="text-center">
+          DWI BLOOD SEARCH WARRANT,{" "}
+          <u>
+            {this.state.offenderFirst} {this.state.offenderLast},{" "}
+            {this.state.dob}
+          </u>
+        </h5>
       </div>
     );
   }

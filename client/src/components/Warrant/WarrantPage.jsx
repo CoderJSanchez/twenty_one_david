@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Jumbotron } from "reactstrap";
 import { Form, FormGroup, Label, Input } from "reactstrap";
 import axios from "axios";
 
@@ -208,6 +208,15 @@ class WarrantPage extends Component {
   render() {
     return (
       <Container>
+        <Jumbotron>
+          <h3>Warrant Page Instructions</h3>
+          <h6>
+            Fill in each box that suits your situation with the requested
+            information. When you click submit, a complete warrant will be
+            generated that you can view and print. Each page will be formated
+            when printed.
+          </h6>
+        </Jumbotron>
         <Form>
           <FormGroup>
             <Row>
