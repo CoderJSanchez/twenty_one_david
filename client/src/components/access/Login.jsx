@@ -36,7 +36,7 @@ class Login extends Component {
       .post("/api/users/login", officer)
       .then(res => {
         localStorage.setItem("token", JSON.stringify(res.data));
-        window.location = "/selectstep";
+        window.location = "/dwitype";
       })
       .catch(err => console.log(err));
   };

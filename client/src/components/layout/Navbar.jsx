@@ -12,7 +12,7 @@ class Navbar extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <nav className="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
         {label}
 
         <div className="container">
@@ -58,13 +58,32 @@ class Navbar extends Component {
                 <React.Fragment>
                   <li className="nav-item">
                     <Link className="nav-link" to="/warrant">
-                      Warrant Page
+                      Create Warrant
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/narrative">
-                      Narrative Page
+                  <li className="nav-item dropdown">
+                    <Link
+                      className="nav-link dropdown-toggle"
+                      to="/dwitype"
+                      id="navbarDropdown"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      DWI Type
                     </Link>
+                    <div
+                      className="dropdown-menu"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <Link className="dropdown-item" to="/breathfailed">
+                        Breath
+                      </Link>
+                      <Link className="dropdown-item" to="/warrantguide">
+                        Blood
+                      </Link>
+                    </div>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/logout">

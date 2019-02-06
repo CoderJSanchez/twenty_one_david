@@ -11,6 +11,10 @@ router.get("/test", (req, res) => res.json({ msg: "Warrant Works" }));
 
 router.post("/warrant", (req, res) => {
   const newWarrant = new Warrant({
+    reportNumber: req.body.reportNumber,
+    countyOfWarrant: req.body.countyOfWarrant,
+    countyOfOffense: req.body.countyOfOffense,
+    drivingBehaviorTextBox: req.body.drivingBehaviorTextBox,
     month: req.body.month,
     day: req.body.day,
     year: req.body.year,
@@ -117,4 +121,14 @@ router.get("/warrant", (req, res) => {
     })
     .catch(err => res.statas(404).json(err));
 });
+
+// router.get("/warrant/:id", (req, res) => {
+//   Warrant.findOne({ _id: req.params.id })
+//     .then(data => {
+//       console.log(data._id);
+//       res.json(data);
+//     })
+//     .catch(err => res.status(404).json(err));
+// });
+
 module.exports = router;

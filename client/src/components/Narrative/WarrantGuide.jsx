@@ -24,7 +24,7 @@ class BreathFailed extends Component {
   render() {
     return (
       <div className="container containerMargin">
-        <h1 className="text-center mt-3">DWI with Breath</h1>
+        <h1 className="text-center mt-3">DWI with Blood Warrant</h1>
         <div className="alert alert-danger text-center" role="alert">
           Incident reports are NOT used for DWI arrests.
         </div>
@@ -215,13 +215,12 @@ class BreathFailed extends Component {
             <div className="col-md-6">
               <div className="card" style={{ width: 18 + "rem" }}>
                 <div className="card-body">
-                  <h5 className="card-title">Breath Results</h5>
+                  <h5 className="card-title">DIC-23A</h5>
                   <h6 className="card-subtitle mb-2 text-muted">
-                    Two copies provided
+                    Specimen Routing Report
                   </h6>
                   <p className="card-text">
-                    Breath results and test times used for DWI Module. Set
-                    aside, you're done with this.
+                    This will go to the hospital with you.
                   </p>
                 </div>
               </div>
@@ -245,31 +244,17 @@ class BreathFailed extends Component {
             <div className="col-md-6">
               <div className="card" style={{ width: 18 + "rem" }}>
                 <div className="card-body">
-                  <h5 className="card-title">DIC-25</h5>
+                  <h5 className="card-title">THP-51A</h5>
                   <h6 className="card-subtitle mb-2 text-muted">
-                    Notice of Suspension
+                    Affidavit of person who withdrew blood
                   </h6>
                   <p className="card-text">
-                    Intox will print 2 copes. One goes to offender and one in
-                    your packet. Set aside, you're done with this.
+                    This will go to the hospital with you.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
-              <div className="card" style={{ width: 18 + "rem" }}>
-                <div className="card-body">
-                  <h5 className="card-title">CC</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">
-                    Criminal Complaint
-                  </h6>
-                  <p className="card-text">
-                    Signed by arresting offficer and notorized by any other
-                    officer. Set aside, you're done with this.
-                  </p>
-                </div>
-              </div>
-            </div>
+
             <div className="col-md-6" />
           </div>
         </div>
@@ -300,6 +285,106 @@ class BreathFailed extends Component {
                   <p className="card-text">
                     Complete like any other arrest. No futher action required in
                     the module.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="card mb-3" style={{ width: 18 + "rem" }}>
+                <div className="card-body">
+                  <h5 className="card-title">Prosecution</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">PER SOP</h6>
+                  <p className="card-text">
+                    Complete like any other prosecution. No futher action
+                    required in the module.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="card" style={{ width: 18 + "rem" }}>
+                <div className="card-body">
+                  <h5 className="card-title">Driving Record</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    Two copies required
+                  </h6>
+                  <p className="card-text">
+                    Print two copies even if offender has no DL. Print the empty
+                    return. Place in packet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="card" style={{ width: 18 + "rem" }}>
+                <div className="card-body">
+                  <h5 className="card-title">PC Affidavit</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">PER SOP</h6>
+                  <p className="card-text">
+                    Complete like any other PC Affidavit. No futher action
+                    required in the module.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="card" style={{ width: 18 + "rem" }}>
+                <div className="card-body">
+                  <h5 className="card-title">DWI Envelope</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    Two copies required
+                  </h6>
+                  <p className="card-text">
+                    Place seized DL in envelope. If no DL then write " No DL" on
+                    envelope.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="jumbotron jumboBackground">
+          <h4 className="text-center text-white">
+            Take these documents to the hospital
+          </h4>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="card mb-3" style={{ width: 18 + "rem" }}>
+                <div className="card-body">
+                  <h5 className="card-title">DIC-23A</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    Specimen Routing Report
+                  </h6>
+                  <p className="card-text">
+                    Fill out from "Defendant Name" to Section 3.
+                  </p>
+                  <uo>
+                    <li>
+                      <small>If nurse draws blood, check the nurse box.</small>
+                    </li>
+                    <li>
+                      <small>
+                        If tech or phlebotomist, check Qualified Tech
+                      </small>
+                    </li>
+                  </uo>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="card" style={{ width: 18 + "rem" }}>
+                <div className="card-body">
+                  <h5 className="card-title">DPS Lab Submission</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    Print from CADWEB
+                  </h6>
+                  <p className="card-text">
+                    Attach to outside of blood kit. Fill out all appropriate
+                    boxes.
                   </p>
                 </div>
               </div>

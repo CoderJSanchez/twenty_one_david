@@ -5,6 +5,7 @@ import axios from "axios";
 
 class WarrantPage extends Component {
   state = {
+    reportNumber: "",
     month: "",
     day: "",
     year: "",
@@ -25,6 +26,9 @@ class WarrantPage extends Component {
     height: "",
     weight: "",
     hair: "",
+    drivingBehaviorTextBox: "",
+    countyOfWarrant: "",
+    countyOfOffense: "",
     civilianCheckBox: false,
     officerCheckBox: false,
     suspectAdmittedBox: false,
@@ -111,11 +115,15 @@ class WarrantPage extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const newWarrantForm = {
+      reportNumber: this.state.reportNumber.toUpperCase(),
+      countyOfWarrant: this.state.countyOfWarrant.toUpperCase(),
+      countyOfOffense: this.state.countyOfOffense.toUpperCase(),
       month: this.state.month.toUpperCase(),
       day: this.state.day.toUpperCase(),
       year: this.state.year,
       time: this.state.time,
       address: this.state.address.toUpperCase(),
+      drivingBehaviorTextBox: this.state.drivingBehaviorTextBox,
       officerLast: this.state.officerLast.toUpperCase(),
       officerID: this.state.officerID,
       officerWitnessLast: this.state.officerWitnessLast.toUpperCase(),
@@ -203,12 +211,107 @@ class WarrantPage extends Component {
       .post("/api/warrantData/warrant", newWarrantForm)
       .then(warr => (window.location = "/warrantfinal"))
       .catch(err => console.log(err));
+
+    this.setState({
+      reportNumber: "",
+      month: "",
+      day: "",
+      year: "",
+      time: "",
+      address: "",
+      officerLast: "",
+      officerID: "",
+      officerWitnessLast: "",
+      officerWitnessID: "",
+      civilianWitnessFull: "",
+      civilianWitnessDOB: "",
+      offenderLast: "",
+      offenderFirst: "",
+      race: "",
+      sex: "",
+      dob: "",
+      dl: "",
+      height: "",
+      weight: "",
+      hair: "",
+      drivingBehaviorTextBox: "",
+      countyOfWarrant: "",
+      countyOfOffense: "",
+      civilianCheckBox: false,
+      officerCheckBox: false,
+      suspectAdmittedBox: false,
+      alcoholStrong: false,
+      alcoholModerate: false,
+      alcoholFaint: false,
+      alcoholNone: false,
+      eyesBloodshot: false,
+      eyesRedPink: false,
+      eyesGlassy: false,
+      eyesWatery: false,
+      eyesDilated: false,
+      eyesNormal: false,
+      speechThick: false,
+      speechIncoherent: false,
+      speechSlurred: false,
+      speechSlow: false,
+      speechMumbled: false,
+      speechStuttered: false,
+      speechTalkative: false,
+      speechRapid: false,
+      speechRepetitive: false,
+      speechFair: false,
+      speechGood: false,
+      attArgumentative: false,
+      attCombative: false,
+      attProfane: false,
+      attSarcastic: false,
+      attInsulting: false,
+      attCooperative: false,
+      attCocky: false,
+      attLaughing: false,
+      attCarefree: false,
+      attIndifferent: false,
+      attSleepy: false,
+      attPolite: false,
+      attSilent: false,
+      attReserved: false,
+      attCalm: false,
+      attTalkative: false,
+      attAnxious: false,
+      attExcited: false,
+      attConfused: false,
+      attUninhibited: false,
+      attMoodswing: false,
+      appDisorderly: false,
+      appOrderly: false,
+      appUrine: false,
+      appVomit: false,
+      balFalling: false,
+      balUnsteady: false,
+      balSwaying: false,
+      balSupport: false,
+      balFair: false,
+      balGood: false,
+      walkFalling: false,
+      walkStagg: false,
+      walkSwaying: false,
+      walkHeavy: false,
+      walkFair: false,
+      walkGood: false,
+      walkSupport: false,
+      turnFalling: false,
+      turnStaggering: false,
+      turnSwaying: false,
+      turnHesitant: false,
+      turnFair: false,
+      turnGood: false
+    });
   };
 
   render() {
     return (
       <Container>
-        <Jumbotron>
+        <Jumbotron className="mt-4">
           <h3>Warrant Page Instructions</h3>
           <h6>
             Fill in each box that suits your situation with the requested
@@ -219,10 +322,48 @@ class WarrantPage extends Component {
         </Jumbotron>
         <Form>
           <FormGroup>
+            <div className="row">
+              <Col md="4">
+                <h4>Report Number</h4>
+                <Input
+                  className="mb-3"
+                  type="text"
+                  name="reportNumber"
+                  placeholder="20xxRxxxxx"
+                  value={this.state.reportNumber}
+                  onChange={this.handleInputs}
+                />
+              </Col>
+            </div>
             <Row>
-              <h3>Date</h3>
+              <Col md="6">
+                <h4>County of Warrant Execution</h4>
+                <Input
+                  className="mb-3"
+                  type="text"
+                  name="countyOfWarrant"
+                  placeholder="Where warrant will execute"
+                  value={this.state.countyOfWarrant}
+                  onChange={this.handleInputs}
+                />
+              </Col>
+
+              <Col md="6">
+                <h4>County of Offense</h4>
+                <Input
+                  className="mb-3"
+                  type="text"
+                  name="countyOfOffense"
+                  placeholder="Where offense happened"
+                  value={this.state.countyOfOffense}
+                  onChange={this.handleInputs}
+                />
+              </Col>
             </Row>
-            <Row className="mt-3">
+            <Row>
+              <h4>Date</h4>
+            </Row>
+            <Row>
               <Col className="mb-3">
                 <Input
                   type="text"
@@ -261,11 +402,12 @@ class WarrantPage extends Component {
               </Col>
             </Row>
             <Row>
-              <h3>Address</h3>
+              <h4>Address</h4>
             </Row>
             <Row>
               <Col xs="6">
                 <Input
+                  className="mb-3"
                   type="text"
                   name="address"
                   placeholder="Address of Offense"
@@ -277,10 +419,11 @@ class WarrantPage extends Component {
             <Row className="mt-2">
               <h4>Affiant Officer</h4>
             </Row>
-            <Row className="mt-3">
+            <Row>
               <Col xs="6">
                 <Input
                   type="text"
+                  className="mb-3"
                   name="officerLast"
                   placeholder="Officer Applying for Warrant"
                   value={this.state.officerLast}
@@ -290,6 +433,7 @@ class WarrantPage extends Component {
               <Col xs="6">
                 <Input
                   type="text"
+                  className="mb-3"
                   name="officerID"
                   placeholder="Officer ID Number"
                   value={this.state.officerID}
@@ -300,10 +444,11 @@ class WarrantPage extends Component {
             <Row className="mt-2">
               <h4>Officer Witness</h4>
             </Row>
-            <Row className="mt-3">
+            <Row>
               <Col xs="6">
                 <Input
                   type="text"
+                  className="mb-3"
                   name="officerWitnessLast"
                   placeholder="Officer witness"
                   value={this.state.officerWitnessLast}
@@ -313,6 +458,7 @@ class WarrantPage extends Component {
               <Col xs="6">
                 <Input
                   type="text"
+                  className="mb-3"
                   name="officerWitnessID"
                   placeholder="Officer Witness ID "
                   value={this.state.officerWitnessID}
@@ -323,10 +469,11 @@ class WarrantPage extends Component {
             <Row className="mt-2">
               <h4>Civilian Witness (full name)</h4>
             </Row>
-            <Row className="mt-3">
+            <Row>
               <Col xs="6">
                 <Input
                   type="text"
+                  className="mb-3"
                   name="civilianWitnessFull"
                   placeholder="Civilian Witness full name"
                   value={this.state.civilianWitnessFull}
@@ -346,7 +493,7 @@ class WarrantPage extends Component {
             <Row className="mt-2">
               <h4>Offender Info</h4>
             </Row>
-            <Row className="mt-3">
+            <Row>
               <Col className="mb-3">
                 <Input
                   type="text"
@@ -473,7 +620,31 @@ class WarrantPage extends Component {
           </FormGroup>
           <br />
           <br />
-          <br />
+          <div className="row">
+            <div className="col-md-12 form-group">
+              <label>Describe Driving Observations</label>
+              <textarea
+                className="form-control"
+                id="exampleFormControlTextarea1"
+                name="drivingBehaviorTextBox"
+                onChange={this.handleInputs}
+                value={this.state.drivingBehaviorTextBox}
+                rows="3"
+                placeholder="Briefly describe why you believe offender was intoxicated.  Describe vehicle with tag if available."
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4 form-group">
+              <label>Describe Public Place</label>
+              <textarea
+                className="form-control"
+                id="formControl"
+                rows="3"
+                placeholder="Briefly describe: roadway, public parking lot, highway etc..."
+              />
+            </div>
+          </div>
           <Row>
             <Col md="12">
               <h2 className="text-center mb-3">

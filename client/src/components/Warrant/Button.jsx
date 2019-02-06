@@ -1,7 +1,21 @@
 import React, { Component } from "react";
+class PrintButton extends Component {
+  state = {};
 
-const Button = () => {
-  return <button>submit</button>;
-};
+  handlePrint = () => {
+    window.print();
+    return false;
+  };
+  render() {
+    return (
+      <button
+        className="printButton btn btn-outline-success"
+        onClick={this.handlePrint}
+      >
+        Print Page
+      </button>
+    );
+  }
+}
 
-export default Button;
+export default PrintButton;

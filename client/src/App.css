@@ -9,6 +9,14 @@
   margin-bottom: -150px;
 }
 
+.navbar {
+  box-shadow: 5px 4px 5px #000;
+}
+
+.containerMargin {
+  margin-top: 80px;
+}
+
 .landingHeader {
   color: white;
   font-size: 4em;
@@ -43,6 +51,27 @@
   height: 800px;
 }
 
+.jumboBackground {
+  background-color: #36454f;
+}
+
+.dwiImage {
+  width: 275px;
+  height: 275px;
+}
+
+.cardStyle {
+  box-shadow: 10px 10px 5px grey;
+  -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(70%);
+}
+
+.cardStyle:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  box-shadow: 12px 12px 5px grey;
+}
+
 @media all {
   .page-break {
     display: none;
@@ -53,5 +82,8 @@
   .page-break {
     display: block;
     page-break-before: always;
+  }
+  .printButton {
+    display: none;
   }
 }

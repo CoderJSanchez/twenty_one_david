@@ -7,10 +7,11 @@ import Register from "./components/access/Register";
 import Login from "./components/access/Login";
 import Logout from "./components/access/Logout";
 import WarrantPage from "./components/Warrant/WarrantPage";
-import NarrativePage from "./components/Narrative/NarrativePage";
+import DWItype from "./components/Narrative/DWItype";
 import SelectStep from "./components/layout/SelectStep";
 import WarrantFinal from "./components/Warrant/WarrantFinal";
 import BreathFailed from "./components/Narrative/BreathFailed";
+import WarrantGuide from "./components/Narrative/WarrantGuide";
 
 import "./App.css";
 
@@ -40,17 +41,16 @@ class App extends Component {
               exact
               path="/warrant"
               render={props => {
-                console.log(props);
                 if (!user) return <Redirect to="/login" />;
                 return <WarrantPage {...props} />;
               }}
             />
             <Route
               exact
-              path="/narrative"
+              path="/dwitype"
               render={props => {
                 if (!user) return <Redirect to="/login" />;
-                return <NarrativePage {...props} />;
+                return <DWItype {...props} />;
               }}
             />
 
@@ -76,6 +76,14 @@ class App extends Component {
               render={props => {
                 if (!user) return <Redirect to="/login" />;
                 return <BreathFailed {...props} />;
+              }}
+            />
+            <Route
+              exact
+              path="/warrantguide"
+              render={props => {
+                if (!user) return <Redirect to="/login" />;
+                return <WarrantGuide {...props} />;
               }}
             />
           </div>

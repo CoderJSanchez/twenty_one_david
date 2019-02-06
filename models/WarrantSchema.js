@@ -3,6 +3,22 @@ const Schema = mongoose.Schema;
 
 //Create Schema
 const WarrantSchema = new Schema({
+  reportNumber: {
+    type: String,
+    required: true
+  },
+  countyOfWarrant: {
+    type: String,
+    required: true
+  },
+  countyOfOffense: {
+    type: String,
+    required: true
+  },
+  drivingBehaviorTextBox: {
+    type: String,
+    required: true
+  },
   month: {
     type: String,
     required: false
