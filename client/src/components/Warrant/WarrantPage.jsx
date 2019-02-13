@@ -1600,7 +1600,7 @@ class WarrantPage extends Component {
               <Label check>
                 <Input
                   type="checkbox"
-                  name="suspectInjured"
+                  name="hgnLackLeft"
                   checked={this.state.hgnLackLeft}
                   onChange={this.handleCheckboxChange}
                   value={this.state.hgnLackLeft}
@@ -1613,7 +1613,7 @@ class WarrantPage extends Component {
               <Label check>
                 <Input
                   type="checkbox"
-                  name="suspectInjured"
+                  name="hgnLackRight"
                   checked={this.state.hgnLackRight}
                   onChange={this.handleCheckboxChange}
                   value={this.state.hgnLackRight}
@@ -1627,7 +1627,7 @@ class WarrantPage extends Component {
               <Label check>
                 <Input
                   type="checkbox"
-                  name="suspectInjured"
+                  name="hgnDisLeft"
                   checked={this.state.hgnDisLeft}
                   onChange={this.handleCheckboxChange}
                   value={this.state.hgnDisRight}
@@ -1639,7 +1639,7 @@ class WarrantPage extends Component {
               <Label check>
                 <Input
                   type="checkbox"
-                  name="suspectInjured"
+                  name="hgnDisRight"
                   checked={this.state.hgnDisRight}
                   onChange={this.handleCheckboxChange}
                   value={this.state.hgnDisRight}
@@ -1653,7 +1653,7 @@ class WarrantPage extends Component {
               <Label check>
                 <Input
                   type="checkbox"
-                  name="suspectInjured"
+                  name="hgnOnsetLeft"
                   checked={this.state.hgnOnsetLeft}
                   onChange={this.handleCheckboxChange}
                   value={this.state.hgnOnsetLeft}
@@ -1665,7 +1665,7 @@ class WarrantPage extends Component {
               <Label check>
                 <Input
                   type="checkbox"
-                  name="suspectInjured"
+                  name="hgnOnsetRight"
                   checked={this.state.hgnOnsetRight}
                   onChange={this.handleCheckboxChange}
                   value={this.state.hgnOnsetRight}

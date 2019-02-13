@@ -113,7 +113,7 @@ const WarrantSchema = new Schema({
   },
   alcoholStrong: {
     type: Boolean,
-    required: true
+    required: false
   },
   alcoholModerate: {
     type: Boolean,

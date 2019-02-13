@@ -133,18 +133,18 @@ router.get("/warrant", (req, res) => {
     })
     .catch(err => res.statas(404).json(err));
 });
-router.get("/warrant/:reportNumber", (req, res) => {
+router.get("/warrant/findwarrant", (req, res) => {
   const errors = {};
-  res.send(req.params.reportNumber);
-  // Warrant.findOne({ repotNumber: req.Warrant.reportNumber })
-  //   .then(data => {
-  //     if (!data) {
-  //       errors.noprofile = "no warrant";
-  //       return res.status(404).json(errors);
-  //     }
-  //     res.json(data);
-  //   })
-  //   .catch(err => res.statas(404).json(err));
+
+  Warrant.find({})
+    .then(data => {
+      if (!data) {
+        errors.noprofile = "no warrant";
+        return res.status(404).json(errors);
+      }
+      res.json(data);
+    })
+    .catch(err => res.statas(404).json(err));
 });
 
 module.exports = router;
