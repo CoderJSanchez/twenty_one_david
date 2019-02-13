@@ -101,7 +101,19 @@ router.post("/warrant", (req, res) => {
     turnSwaying: req.body.turnSwaying,
     turnHesitant: req.body.turnHesitant,
     turnFair: req.body.turnFair,
-    turnGood: req.body.turnGood
+    turnGood: req.body.turnGood,
+    trainedAffient: req.body.trainedAffient,
+    suspectRefused: req.body.suspectRefused,
+    sfstOtherTests: req.body.sfstOtherTests,
+    sfstOfficer: req.body.sfstOfficer,
+    sfstAffient: req.body.sfstAffient,
+    suspectInjured: req.body.suspectInjured,
+    hgnLackLeft: req.body.hgnLackLeft,
+    hgnLackRight: req.body.hgnLackRight,
+    hgnDisLeft: req.body.hgnDisLeft,
+    hgnDisRight: req.body.hgnDisRight,
+    hgnOnsetLeft: req.body.hgnOnsetLeft,
+    hgnOnsetRight: req.body.hgnOnsetRight
   });
   newWarrant
     .save()
@@ -114,21 +126,25 @@ router.get("/warrant", (req, res) => {
   Warrant.findOne({})
     .then(data => {
       if (!data) {
-        errors.noprofile = "no profile";
+        errors.noprofile = "no warrant";
         return res.status(404).json(errors);
       }
       res.json(data);
     })
     .catch(err => res.statas(404).json(err));
 });
-
-// router.get("/warrant/:id", (req, res) => {
-//   Warrant.findOne({ _id: req.params.id })
-//     .then(data => {
-//       console.log(data._id);
-//       res.json(data);
-//     })
-//     .catch(err => res.status(404).json(err));
-// });
+router.get("/warrant/:reportNumber", (req, res) => {
+  const errors = {};
+  res.send(req.params.reportNumber);
+  // Warrant.findOne({ repotNumber: req.Warrant.reportNumber })
+  //   .then(data => {
+  //     if (!data) {
+  //       errors.noprofile = "no warrant";
+  //       return res.status(404).json(errors);
+  //     }
+  //     res.json(data);
+  //   })
+  //   .catch(err => res.statas(404).json(err));
+});
 
 module.exports = router;

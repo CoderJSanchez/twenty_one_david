@@ -71,7 +71,7 @@ class Navbar extends Component {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      DWI Type
+                      DWI Guides
                     </Link>
                     <div
                       className="dropdown-menu"

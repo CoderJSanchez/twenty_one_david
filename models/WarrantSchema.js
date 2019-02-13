@@ -127,6 +127,24 @@ const WarrantSchema = new Schema({
     type: Boolean,
     required: false
   },
+  trainedAffient: {
+    type: Boolean
+  },
+  suspectRefused: {
+    type: Boolean
+  },
+  sfstOtherTests: {
+    type: Boolean
+  },
+  sfstOfficer: {
+    type: Boolean
+  },
+  sfstAffient: {
+    type: Boolean
+  },
+  suspectInjured: {
+    type: Boolean
+  },
   eyesBloodshot: {
     type: Boolean
   },
@@ -308,6 +326,24 @@ const WarrantSchema = new Schema({
     type: Boolean
   },
   walkStagg: {
+    type: Boolean
+  },
+  hgnLackLeft: {
+    type: Boolean
+  },
+  hgnLackRight: {
+    type: Boolean
+  },
+  hgnDisLeft: {
+    type: Boolean
+  },
+  hgnDisRight: {
+    type: Boolean
+  },
+  hgnOnsetLeft: {
+    type: Boolean
+  },
+  hgnOnsetRight: {
     type: Boolean
   }
 });

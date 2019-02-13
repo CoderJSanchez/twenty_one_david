@@ -17,10 +17,10 @@ router.post("/register", (req, res) => {
     email: Joi.string().email({ minDomainAtoms: 2 }),
     password: Joi.string()
       .min(6)
-      .regex(/^[a-zA-Z0-9]{3,30}$/),
+      .regex(/^[a-zA-Z0-9!@#$&*()\\-`.+,/\"]*$/),
     password2: Joi.string()
       .min(6)
-      .regex(/^[a-zA-Z0-9]{3,30}$/)
+      .regex(/^[a-zA-Z0-9!@#$&*()\\-`.+,/\"]*$/)
   };
   const regResult = Joi.validate(req.body, regSchema);
   if (regResult.error) {
@@ -87,7 +87,7 @@ router.post("/login", (req, res) => {
         jwt.sign(
           payload,
           keys.secretOrKey,
-          { expiresIn: 86400 },
+          { expiresIn: "84000s" },
           (err, token) => {
             res.json({
               success: true,
@@ -101,14 +101,5 @@ router.post("/login", (req, res) => {
     });
   });
 });
-
-//protected routes
-// router.get(
-//   "/selectstep",
-//   passport.authenticate("jwt", { session: false }),
-//   (req, res) => {
-//     res.json(req.user);
-//   }
-// );
 
 module.exports = router;

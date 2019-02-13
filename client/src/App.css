@@ -46,9 +46,14 @@
   text-indent: 50px;
 }
 
-.dic24pic {
+.dicPic {
   width: 600px;
   height: 800px;
+}
+
+.dwiEnvelope {
+  width: 600px;
+  height: 200px;
 }
 
 .jumboBackground {

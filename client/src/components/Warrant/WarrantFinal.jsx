@@ -95,7 +95,19 @@ class WarrantFinal extends Component {
     turnHesitant: false,
     turnFair: false,
     turnGood: false,
-    walkStagg: false
+    walkStagg: false,
+    trainedAffient: false,
+    suspectRefused: false,
+    sfstOtherTests: false,
+    sfstOfficer: false,
+    sfstAffient: false,
+    suspectInjured: false,
+    hgnLackLeft: false,
+    hgnLackRight: false,
+    hgnDisLeft: false,
+    hgnDisRight: false,
+    hgnOnsetLeft: false,
+    hgnOnsetRight: false
   };
 
   componentDidMount = () => {
@@ -193,7 +205,19 @@ class WarrantFinal extends Component {
         turnHesitant,
         turnFair,
         turnGood,
-        walkStagg
+        walkStagg,
+        trainedAffient,
+        suspectRefused,
+        sfstOtherTests,
+        sfstOfficer,
+        sfstAffient,
+        suspectInjured,
+        hgnLackLeft,
+        hgnLackRight,
+        hgnDisLeft,
+        hgnDisRight,
+        hgnOnsetLeft,
+        hgnOnsetRight
       } = response.data;
 
       this.setState({
@@ -288,7 +312,19 @@ class WarrantFinal extends Component {
         turnHesitant,
         turnFair,
         turnGood,
-        walkStagg
+        walkStagg,
+        trainedAffient,
+        suspectRefused,
+        sfstOtherTests,
+        sfstOfficer,
+        sfstAffient,
+        suspectInjured,
+        hgnLackLeft,
+        hgnLackRight,
+        hgnDisLeft,
+        hgnDisRight,
+        hgnOnsetLeft,
+        hgnOnsetRight
       });
     });
   };
@@ -1174,6 +1210,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.sfstAffient}
                     />
                     <label className="form-check-label">
                       Affiant who is certified and/or trained in the detection
@@ -1189,6 +1226,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.sfstOfficer}
                     />
                     <label className="form-check-label">
                       SFST Officer including emplyee ID number, a fellow peace
@@ -1205,6 +1243,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.trainedAffient}
                     />
                     <label className="form-check-label">
                       Affiant who was trained in the detection of impaired or
@@ -1219,6 +1258,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.sfstOtherTests}
                     />
                     <label className="form-check-label">
                       SFST Officer including emplyee ID number, a fellow peace
@@ -1234,6 +1274,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.suspectRefused}
                     />
                     <label className="form-check-label">
                       The suspect refused to perform any sobriety tests and made
@@ -1247,6 +1288,7 @@ class WarrantFinal extends Component {
                       className="form-check-input"
                       type="checkbox"
                       value=""
+                      checked={this.state.suspectInjured}
                     />
                     <label className="form-check-label">
                       The suspect was injured or unconscious and unable to

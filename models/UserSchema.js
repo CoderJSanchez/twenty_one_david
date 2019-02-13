@@ -22,7 +22,7 @@ const UserSchema = new Schema({
   warrant: [
     {
       type: Schema.Types.ObjectId,
-      ref: "warrant"
+      ref: "Warrant"
     }
   ]
 });

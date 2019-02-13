@@ -12,6 +12,7 @@ import SelectStep from "./components/layout/SelectStep";
 import WarrantFinal from "./components/Warrant/WarrantFinal";
 import BreathFailed from "./components/Narrative/BreathFailed";
 import WarrantGuide from "./components/Narrative/WarrantGuide";
+import FindWarrant from "./components/Warrant/FindWarrant";
 
 import "./App.css";
 
@@ -84,6 +85,14 @@ class App extends Component {
               render={props => {
                 if (!user) return <Redirect to="/login" />;
                 return <WarrantGuide {...props} />;
+              }}
+            />
+            <Route
+              exact
+              path="/findwarrant"
+              render={props => {
+                if (!user) return <Redirect to="/login" />;
+                return <FindWarrant {...props} />;
               }}
             />
           </div>

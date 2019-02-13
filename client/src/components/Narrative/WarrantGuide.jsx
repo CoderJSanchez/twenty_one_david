@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import dic23 from "../../img/dic-23.png";
 import dic24 from "../../img/dic-24.png";
-import dic25 from "../../img/dic-25.png";
+import dic23A from "../../img/DIC-23A.png";
+import dpsSub from "../../img/dpsSubmission.png";
+import bpf from "../../img/bloodProcedureForm.png";
+import envelope from "../../img/envelope.jpg";
 
 class BreathFailed extends Component {
   state = {
@@ -30,17 +34,22 @@ class BreathFailed extends Component {
         </div>
         <div className="jumbotron jumboBackground">
           <div className="row mb-4">
-            <div className="col-md-4">
+            <div className="col-md-3">
+              <Link to="/warrant">
+                <Button color="danger">Create Warrant</Button>
+              </Link>
+            </div>
+            <div className="col-md-3">
               <Button color="primary" onClick={this.toggle}>
-                Click for sample packet
+                See sample packet
               </Button>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-3">
               <Button color="primary" onClick={this.toggleNarrative}>
                 Narrative sample
               </Button>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-3">
               <button
                 className="btn btn-primary"
                 type="button"
@@ -394,53 +403,12 @@ class BreathFailed extends Component {
             <div className="col-md-6">
               <div className="card mb-3" style={{ width: 18 + "rem" }}>
                 <div className="card-body">
-                  <h5 className="card-title">Prosecution</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">PER SOP</h6>
-                  <p className="card-text">
-                    Complete like any other prosecution. No futher action
-                    required in the module.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="card" style={{ width: 18 + "rem" }}>
-                <div className="card-body">
-                  <h5 className="card-title">Driving Record</h5>
+                  <h5 className="card-title">Blood Draw Procedure Form</h5>
                   <h6 className="card-subtitle mb-2 text-muted">
-                    Two copies required
+                    Comes from Warrant packet.
                   </h6>
                   <p className="card-text">
-                    Print two copies even if offender has no DL. Print the empty
-                    return. Place in packet.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-6">
-              <div className="card" style={{ width: 18 + "rem" }}>
-                <div className="card-body">
-                  <h5 className="card-title">PC Affidavit</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">PER SOP</h6>
-                  <p className="card-text">
-                    Complete like any other PC Affidavit. No futher action
-                    required in the module.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="card" style={{ width: 18 + "rem" }}>
-                <div className="card-body">
-                  <h5 className="card-title">DWI Envelope</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">
-                    Two copies required
-                  </h6>
-                  <p className="card-text">
-                    Place seized DL in envelope. If no DL then write " No DL" on
-                    envelope.
+                    Make sure person whe drew blood signs this form.
                   </p>
                 </div>
               </div>
@@ -455,12 +423,30 @@ class BreathFailed extends Component {
           >
             <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
             <ModalBody>
-              <h5>DIC 23</h5>
-              <img className="dic24pic" src={dic23} alt="dic-24" />
-              <h5>DIC 24</h5>
-              <img className="dic24pic" src={dic24} alt="dic-24" />
-              <h5>DIC 25</h5>
-              <img className="dic24pic" src={dic25} alt="dic-24" />
+              <h5>
+                DWI Envelope - <small>Get from Report Writing Room</small>
+              </h5>
+              <img className="dwiEnvelope" src={envelope} alt="dic-24" />
+              <h5>
+                DIC 23 - <small>Printed by officer after narrative</small>
+              </h5>
+              <img className="dicPic" src={dic23} alt="dic-23" />
+              <h5>
+                DIC 24 - <small>Given to officer by Intox</small>
+              </h5>
+              <img className="dicPic" src={dic24} alt="dic-24" />
+              <h5>
+                DPS Submission - <small>Printed from CADWEB</small>
+              </h5>
+              <img className="dicPic" src={dpsSub} alt="dic-24" />
+              <h5>
+                Blood Draw Procedure Formn - <small>Printed with warrant</small>
+              </h5>
+              <img className="dicPic" src={bpf} alt="dic-24" />
+              <h5>
+                DIC-23A - <small>Given to officer by Intox</small>
+              </h5>
+              <img className="dicPic" src={dic23A} alt="dic-24" />
             </ModalBody>
             <ModalFooter>
               <Button color="secondary" onClick={this.toggle}>

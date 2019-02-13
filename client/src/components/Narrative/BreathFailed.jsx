@@ -371,11 +371,11 @@ class BreathFailed extends Component {
             <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
             <ModalBody>
               <h5>DIC 23</h5>
-              <img className="dic24pic" src={dic23} alt="dic-24" />
+              <img className="dicPic" src={dic23} alt="dic-24" />
               <h5>DIC 24</h5>
-              <img className="dic24pic" src={dic24} alt="dic-24" />
+              <img className="dicPic" src={dic24} alt="dic-24" />
               <h5>DIC 25</h5>
-              <img className="dic24pic" src={dic25} alt="dic-24" />
+              <img className="dicPic" src={dic25} alt="dic-24" />
             </ModalBody>
             <ModalFooter>
               <Button color="secondary" onClick={this.toggle}>

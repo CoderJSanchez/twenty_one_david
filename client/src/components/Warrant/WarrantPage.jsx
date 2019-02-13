@@ -96,7 +96,19 @@ class WarrantPage extends Component {
     turnSwaying: false,
     turnHesitant: false,
     turnFair: false,
-    turnGood: false
+    turnGood: false,
+    trainedAffient: false,
+    suspectRefused: false,
+    sfstOtherTests: false,
+    sfstOfficer: false,
+    sfstAffient: false,
+    suspectInjured: false,
+    hgnLackLeft: false,
+    hgnLackRight: false,
+    hgnDisLeft: false,
+    hgnDisRight: false,
+    hgnOnsetLeft: false,
+    hgnOnsetRight: false
   };
   handleInputs = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -205,7 +217,19 @@ class WarrantPage extends Component {
       turnSwaying: this.state.turnSwaying,
       turnHesitant: this.state.turnHesitant,
       turnFair: this.state.turnFair,
-      turnGood: this.state.turnGood
+      turnGood: this.state.turnGood,
+      trainedAffient: this.state.trainedAffient,
+      suspectRefused: this.state.suspectRefused,
+      sfstOtherTests: this.state.sfstOtherTests,
+      sfstOfficer: this.state.sfstOfficer,
+      sfstAffient: this.state.sfstAffient,
+      suspectInjured: this.state.suspectInjured,
+      hgnLackLeft: this.state.hgnLackLeft,
+      hgnLackRight: this.state.hgnLackRight,
+      hgnDisLeft: this.state.hgnDisLeft,
+      hgnDisRight: this.state.hgnDisRight,
+      hgnOnsetLeft: this.state.hgnOnsetLeft,
+      hgnOnsetRight: this.state.hgnOnsetRight
     };
     axios
       .post("/api/warrantData/warrant", newWarrantForm)
@@ -304,7 +328,19 @@ class WarrantPage extends Component {
       turnSwaying: false,
       turnHesitant: false,
       turnFair: false,
-      turnGood: false
+      turnGood: false,
+      trainedAffient: false,
+      suspectRefused: false,
+      sfstOtherTests: false,
+      sfstOfficer: false,
+      sfstAffient: false,
+      suspectInjured: false,
+      hgnLackLeft: false,
+      hgnLackRight: false,
+      hgnDisLeft: false,
+      hgnDisRight: false,
+      hgnOnsetLeft: false,
+      hgnOnsetRight: false
     });
   };
 
@@ -369,7 +405,7 @@ class WarrantPage extends Component {
                   type="text"
                   name="month"
                   value={this.state.month}
-                  placeholder="Month"
+                  placeholder="Month - 'January' "
                   onChange={this.handleInputs}
                 />
               </Col>
@@ -377,14 +413,14 @@ class WarrantPage extends Component {
                 <Input
                   type="text"
                   name="day"
-                  placeholder="Day"
+                  placeholder="Day - ex. '21st'"
                   value={this.state.day}
                   onChange={this.handleInputs}
                 />
               </Col>
               <Col>
                 <Input
-                  type="text"
+                  type="year"
                   name="year"
                   placeholder="Year"
                   value={this.state.year}
@@ -1449,11 +1485,200 @@ class WarrantPage extends Component {
               </Row>
             </Col>
           </Row>
+          <Row className="mt-3">
+            <h4>Who conducted SFST's?</h4>
+          </Row>
+          <Row>
+            <Col md="4">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="sfstAffient"
+                  checked={this.state.sfstAffient}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.sfstAffient}
+                />{" "}
+                Affient who is{" "}
+                <strong>
+                  <u>certified</u>
+                </strong>{" "}
+                in HGN, WAT, OLS
+              </Label>
+            </Col>
+            <Col md="4">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="sfstOfficer"
+                  checked={this.state.sfstOfficer}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.sfstOfficer}
+                />{" "}
+                Other Officer{" "}
+                <strong>
+                  <u>certified</u>
+                </strong>{" "}
+                in HGN, WAT, OLG
+              </Label>
+            </Col>
+            <Col md="4">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="trainedAffient"
+                  checked={this.state.trainedAffient}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.trainedAffient}
+                />{" "}
+                Affient{" "}
+                <strong>
+                  <u>trained</u>
+                </strong>{" "}
+                in a variety of sobriety tests
+              </Label>
+            </Col>
+          </Row>
+          <br />
+          <br />
+          <Row>
+            <Col md="4">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="sfstOtherTests"
+                  checked={this.state.sfstOtherTests}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.sfstOtherTests}
+                />{" "}
+                Other Officer{" "}
+                <strong>
+                  <u>trained</u>
+                </strong>{" "}
+                in a variety of sobriety tests
+              </Label>
+            </Col>
+            <Col md="4">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="suspectRefused"
+                  checked={this.state.suspectRefused}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.suspectRefused}
+                />
+                Suspect Refused and made the following statements.
+              </Label>
+            </Col>
+            <Col md="4">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="suspectInjured"
+                  checked={this.state.suspectInjured}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.suspectInjured}
+                />
+                Suspect was injured or unconscious
+              </Label>
+            </Col>
+          </Row>
+          <br />
+          <br />
+          <Row>
+            <h4>HGN Clues</h4>
+          </Row>
+          <Row>
+            <Col md="2">
+              <p>Left Eye</p>
+            </Col>
+            <Col md="2">
+              <p>Right Eye</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="suspectInjured"
+                  checked={this.state.hgnLackLeft}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.hgnLackLeft}
+                />
+                Left
+              </Label>
+            </Col>
+
+            <Col md="10">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="suspectInjured"
+                  checked={this.state.hgnLackRight}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.hgnLackRight}
+                />
+                Lack of smooth pursuit
+              </Label>
+            </Col>
+          </Row>
+          <Row>
+            <Col md="2">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="suspectInjured"
+                  checked={this.state.hgnDisLeft}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.hgnDisRight}
+                />
+                Left
+              </Label>
+            </Col>
+            <Col md="2">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="suspectInjured"
+                  checked={this.state.hgnDisRight}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.hgnDisRight}
+                />
+                Sus. Nystagmus
+              </Label>
+            </Col>
+          </Row>
+          <Row>
+            <Col md="2">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="suspectInjured"
+                  checked={this.state.hgnOnsetLeft}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.hgnOnsetLeft}
+                />
+                Left
+              </Label>
+            </Col>
+            <Col md="2">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="suspectInjured"
+                  checked={this.state.hgnOnsetRight}
+                  onChange={this.handleCheckboxChange}
+                  value={this.state.hgnOnsetRight}
+                />
+                Prior to 45
+              </Label>
+            </Col>
+          </Row>
 
           <button
             onClick={this.handleSubmit}
             type="submit"
-            className="btn btn-primary btn-lg btn-block"
+            className="btn btn-primary btn-lg btn-block mt-4"
           >
             Submit
           </button>
