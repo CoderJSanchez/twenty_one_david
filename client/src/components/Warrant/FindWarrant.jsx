@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Jumbotron } from "reactstrap";
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Jumbotron } from "reactstrap";
 import axios from "axios";
 
 class FindWarrant extends Component {

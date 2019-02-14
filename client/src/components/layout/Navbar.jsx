@@ -19,14 +19,7 @@ class Navbar extends Component {
           <Link className="navbar-brand" to="/">
             C
           </Link>
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                {" "}
-                About
-              </Link>
-            </li>
-          </ul>
+
           <button
             className="navbar-toggler"
             type="button"
